@@ -1,9 +1,8 @@
-package com.salesflow.plan_service.infrastructure.persistence.init;
-
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
+package com.salesflow.person_service.infrastructure.persistence.init;
 
 import jakarta.annotation.PostConstruct;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 
 @Component
 public class DatabaseInitializer {

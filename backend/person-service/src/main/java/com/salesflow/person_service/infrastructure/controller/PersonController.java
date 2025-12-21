@@ -1,5 +1,9 @@
 package com.salesflow.person_service.infrastructure.controller;
 
+import com.salesflow.person_service.application.dto.PersonRequestDto;
+import com.salesflow.person_service.application.dto.PersonResponseDto;
+import com.salesflow.person_service.application.porters.in.CreatePersonUseCase;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,12 +13,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/person")
+@RequiredArgsConstructor
 public class PersonController {
 
-    @PostMapping
-    public ResponseEntity<PersonResponseDTO> createPerson(@RequestBody PersonRequestDTO request) {
+    private final CreatePersonUseCase createPersonUseCase;
 
-        PersonResponseDTO saved = createPersonUseCase.createPerson(request);
+    @PostMapping
+    public ResponseEntity<PersonResponseDto> createPerson(@RequestBody PersonRequestDto request) {
+
+        PersonResponseDto saved = createPersonUseCase.createPerson(request);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(saved);
     }
