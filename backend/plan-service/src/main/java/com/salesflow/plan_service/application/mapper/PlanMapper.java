@@ -5,6 +5,7 @@ import com.salesflow.plan_service.application.dto.PlanResponseDto;
 import com.salesflow.plan_service.domain.model.Plan;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class PlanMapper {
 
@@ -20,12 +21,13 @@ public class PlanMapper {
     }
 
     public static PlanResponseDto toDto(Plan plan) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         return new PlanResponseDto(
                 plan.getPlanId(),
                 plan.getName(),
                 plan.getType(),
                 plan.getMonthlyPrice(),
-                plan.getCreated(),
+                plan.getCreated().toLocalDate().format(formatter),
                 plan.isActive(),
                 plan.getDescription()
         );
