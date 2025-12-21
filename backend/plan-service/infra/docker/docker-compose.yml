@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres:15
+    container_name: salesflow-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: salesflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+#  plan-service:
+#    build: .
+#    container_name: plan-service
+#    restart: always
+#    env_file:
+#      - ../env/local.env
+#    ports:
+#      - "7070:7070"
+#    depends_on:
+#      - db
+
+volumes:
+  db-data:
