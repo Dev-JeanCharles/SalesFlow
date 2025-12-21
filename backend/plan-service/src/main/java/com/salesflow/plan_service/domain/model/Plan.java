@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 public class Plan {
 
-    private String planId; // 8 caracteres
+    private String planId;
     private String name;
     private TypeEnum type;
     private BigDecimal monthlyPrice;
@@ -25,6 +25,15 @@ public class Plan {
         this.description = description;
     }
 
+    public Plan( String name, TypeEnum type, BigDecimal monthlyPrice, LocalDateTime created, boolean active, String description) {
+        this.name = name;
+        this.type = type;
+        this.monthlyPrice = monthlyPrice;
+        this.created = created;
+        this.active = active;
+        this.description = description;
+    }
+
     public String getPlanId() { return planId; }
     public String getName() { return name; }
     public TypeEnum getType() { return type; }
@@ -34,4 +43,9 @@ public class Plan {
     public String getDescription() { return description; }
 
     public void setActive(boolean active) { this.active = active; }
+
+    public void setPlanId(String planId) {
+        this.planId = planId;
+    }
+
 }

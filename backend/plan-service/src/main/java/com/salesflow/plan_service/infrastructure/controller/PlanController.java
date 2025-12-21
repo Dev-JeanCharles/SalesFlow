@@ -6,6 +6,8 @@ import com.salesflow.plan_service.application.mapper.PlanMapper;
 import com.salesflow.plan_service.application.port.in.CreatePlanUseCase;
 import com.salesflow.plan_service.application.service.PlanService;
 import com.salesflow.plan_service.domain.model.Plan;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,10 +25,10 @@ public class PlanController {
     }
 
     @PostMapping
-    public ResponseEntity<PlanResponseDto> createPlan(@RequestBody PlanRequestDto request) {
+    public ResponseEntity<PlanResponseDto> createPlan(@RequestBody @Valid PlanRequestDto request) {
 
         var saved = createPlanUseCase.createPlan(request);
 
-        return ResponseEntity.ok(saved);
+        return ResponseEntity.status(HttpStatus.CREATED).body(saved);
     }
 }

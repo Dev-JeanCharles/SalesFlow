@@ -2,6 +2,8 @@ package com.salesflow.plan_service.infrastructure.persistence.entity;
 
 import com.salesflow.plan_service.domain.enums.TypeEnum;
 import jakarta.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -11,7 +13,7 @@ import java.time.LocalDateTime;
 public class PlanJpa {
 
     @Id
-    @Column(length = 8)
+    @Column(length = 10)
     private String planId;
 
     private String name;

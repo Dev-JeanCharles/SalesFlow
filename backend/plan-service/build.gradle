@@ -25,8 +25,13 @@ repositories {
 }
 
 dependencies {
+	//JPA
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	//SECURITY
 	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	//VALIDATION
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
 	compileOnly 'org.projectlombok:lombok'

@@ -6,22 +6,33 @@ import com.salesflow.plan_service.application.mapper.PlanMapper;
 import com.salesflow.plan_service.application.port.in.CreatePlanUseCase;
 import com.salesflow.plan_service.domain.model.Plan;
 import com.salesflow.plan_service.domain.port.in.PlanRepositoryPort;
+import com.salesflow.plan_service.infrastructure.persistence.generator.PlanIdGenerator;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
 @Service
-public class PlanService  implements CreatePlanUseCase {
+public class PlanService implements CreatePlanUseCase {
 
     private final PlanRepositoryPort planRepositoryPort;
+    private final PlanIdGenerator planIdGenerator;
 
-    public PlanService(PlanRepositoryPort planRepositoryPort) {
+    public PlanService(PlanRepositoryPort planRepositoryPort,
+                       PlanIdGenerator planIdGenerator
+    ) {
         this.planRepositoryPort = planRepositoryPort;
+        this.planIdGenerator = planIdGenerator;
     }
 
     @Override
     public PlanResponseDto createPlan(PlanRequestDto request) {
-        var planSaved = planRepositoryPort.save(PlanMapper.toDomain(request));
-        return PlanMapper.toDto(planSaved);
+
+        Plan plan = PlanMapper.toDomain(request);
+
+        plan.setPlanId(planIdGenerator.nextId());
+
+        Plan saved = planRepositoryPort.save(plan);
+
+        return PlanMapper.toDto(saved);
     }
 }

@@ -10,7 +10,6 @@ public class PlanMapper {
 
     public static Plan toDomain(PlanRequestDto request) {
         return new Plan(
-                request.planId(),
                 request.name(),
                 request.type(),
                 request.monthlyPrice(),
