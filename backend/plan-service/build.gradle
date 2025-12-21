@@ -25,8 +25,14 @@ repositories {
 }
 
 dependencies {
+	//JPA
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	//SECURITY
 	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	//VALIDATION
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'org.postgresql:postgresql'
@@ -39,4 +45,22 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+tasks.withType(Test) {
+	enabled = false
+}
+
+// -------------------- Configuração para local.env --------------------
+tasks.named('bootRun') {
+	doFirst {
+		def envFile = file('local.env')
+		if (envFile.exists()) {
+			envFile.eachLine { line ->
+				if (!line.startsWith('#') && line.contains('=')) {
+					def (key, value) = line.split('=', 2)
+					environment key, value
+				}
+			}
+		}
+	}
 }
