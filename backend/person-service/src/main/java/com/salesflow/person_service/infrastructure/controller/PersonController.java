@@ -3,6 +3,7 @@ package com.salesflow.person_service.infrastructure.controller;
 import com.salesflow.person_service.application.dto.PersonRequestDto;
 import com.salesflow.person_service.application.dto.PersonResponseDto;
 import com.salesflow.person_service.application.porters.in.CreatePersonUseCase;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +20,7 @@ public class PersonController {
     private final CreatePersonUseCase createPersonUseCase;
 
     @PostMapping
-    public ResponseEntity<PersonResponseDto> createPerson(@RequestBody PersonRequestDto request) {
+    public ResponseEntity<PersonResponseDto> createPerson(@RequestBody @Valid PersonRequestDto request) {
 
         PersonResponseDto saved = createPersonUseCase.createPerson(request);
 
