@@ -1,13 +1,11 @@
 package com.salesflow.plan_service.infrastructure.adapter.in.web.exception;
 
 import com.salesflow.plan_service.application.exception.model.ErrorResponse;
-import com.salesflow.plan_service.application.exception.types.DatabaseException;
-import com.salesflow.plan_service.application.exception.types.EntityAlreadyExistsException;
-import com.salesflow.plan_service.application.exception.types.NotFoundException;
-import com.salesflow.plan_service.application.exception.types.UnprocessableEntityException;
+import com.salesflow.plan_service.application.exception.types.*;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -43,6 +41,31 @@ public class GlobalExceptionHandler {
                 .body(ErrorResponse.of(ex.getCode(), ex.getMessage()));
     }
 
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    public ResponseEntity<ErrorResponse> handleHttpMessageNotReadable(
+            HttpMessageNotReadableException ex) {
+
+        Throwable cause = ex.getCause();
+
+        while (cause != null) {
+            if (cause instanceof InvalidPlanTypeException invalidEnum) {
+                return ResponseEntity
+                        .status(HttpStatus.BAD_REQUEST)
+                        .body(ErrorResponse.of(
+                                "INVALID_PLAN_TYPE",
+                                invalidEnum.getMessage()
+                        ));
+            }
+            cause = cause.getCause();
+        }
+
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(ErrorResponse.of(
+                        "INVALID_REQUEST",
+                        "Malformed JSON request"
+                ));
+    }
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorResponse> handleValidation(
             MethodArgumentNotValidException ex) {
