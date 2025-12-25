@@ -2,6 +2,7 @@ package com.salesflow.plan_service.application.service;
 
 import com.salesflow.plan_service.application.dto.PlanRequestDto;
 import com.salesflow.plan_service.application.dto.PlanResponseDto;
+import com.salesflow.plan_service.application.exception.types.NotFoundException;
 import com.salesflow.plan_service.application.mapper.PlanMapper;
 import com.salesflow.plan_service.application.port.in.CreatePlanUseCase;
 import com.salesflow.plan_service.application.port.in.GetPlanByIdUseCase;
@@ -39,9 +40,17 @@ public class PlanService implements CreatePlanUseCase, GetPlanByIdUseCase {
 
     @Override
     public PlanResponseDto getById(String planId) {
+
+        if (planId == null || planId.isBlank()) {
+            throw new IllegalArgumentException("plan_id is required");
+        }
+
         Plan plan = planRepositoryPort.findById(planId)
                 .orElseThrow(() ->
-                        new RuntimeException("Plano não encontrado: " + planId)
+                        new NotFoundException(
+                                "PLAN_NOT_FOUND",
+                                "Plano não encontrado"
+                        )
                 );
 
         return PlanMapper.toDto(plan);

@@ -2,6 +2,7 @@ package com.salesflow.plan_service.application.service;
 
 import com.salesflow.plan_service.application.dto.PlanRequestDto;
 import com.salesflow.plan_service.application.dto.PlanResponseDto;
+import com.salesflow.plan_service.application.exception.types.NotFoundException;
 import com.salesflow.plan_service.domain.enums.TypeEnum;
 import com.salesflow.plan_service.domain.model.Plan;
 import com.salesflow.plan_service.domain.port.in.PlanRepositoryPort;
@@ -14,11 +15,16 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.Optional;
+
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
@@ -164,5 +170,35 @@ class PlanServiceTest {
         assertThat(response.monthlyPrice()).isEqualByComparingTo(defaultRequest.monthlyPrice());
         assertThat(response.active()).isEqualTo(defaultRequest.active());
         assertThat(response.description()).isEqualTo(defaultRequest.description());
+    }
+
+    @Test
+    void shouldReturnPlanWhenFound() {
+        Plan plan = new Plan(
+                "PL000001",
+                "Plano Controle",
+                TypeEnum.CONTROLE,
+                BigDecimal.valueOf(99.90),
+                LocalDateTime.now(),
+                true,
+                "Plano controle"
+        );
+
+        when(planRepositoryPort.findById("PL000001"))
+                .thenReturn(Optional.of(plan));
+
+        PlanResponseDto response = planService.getById("PL000001");
+
+        assertEquals("PL000001", response.planId());
+        assertEquals(TypeEnum.CONTROLE, response.type());
+    }
+
+    @Test
+    void shouldThrowExceptionWhenNotFound() {
+        when(planRepositoryPort.findById("PL999999"))
+                .thenReturn(Optional.empty());
+
+        assertThrows(NotFoundException.class,
+                () -> planService.getById("PL999999"));
     }
 }

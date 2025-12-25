@@ -14,8 +14,11 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
@@ -47,7 +50,6 @@ class PlanRepositoryAdapterTest {
 
     @Test
     void shouldSavePlanAndReturnDomainObject() {
-        // given
         PlanJpa savedJpa = new PlanJpa(
                 "PL000123",
                 "Plano Premium",
@@ -60,10 +62,8 @@ class PlanRepositoryAdapterTest {
 
         when(repository.save(any(PlanJpa.class))).thenReturn(savedJpa);
 
-        // when
         Plan result = adapter.save(domainPlan);
 
-        // then
         assertThat(result).isNotNull();
         assertThat(result.getPlanId()).isEqualTo("PL000123");
         assertThat(result.getName()).isEqualTo("Plano Premium");
@@ -125,5 +125,36 @@ class PlanRepositoryAdapterTest {
                 )
                 .isInstanceOf(RuntimeException.class)
                 .hasMessage("Erro no banco");
+    }
+
+    @Test
+    void shouldReturnPlanWhenFound() {
+        PlanJpa jpa = new PlanJpa(
+                "PL000001",
+                "Plano Controle",
+                TypeEnum.CONTROLE,
+                BigDecimal.valueOf(99.90),
+                LocalDateTime.now(),
+                true,
+                "Plano controle"
+        );
+
+        when(repository.findById("PL000001"))
+                .thenReturn(Optional.of(jpa));
+
+        Optional<Plan> plan = adapter.findById("PL000001");
+
+        assertTrue(plan.isPresent());
+        assertEquals("PL000001", plan.get().getPlanId());
+    }
+
+    @Test
+    void shouldReturnEmptyWhenNotFound() {
+        when(repository.findById("PL999999"))
+                .thenReturn(Optional.empty());
+
+        Optional<Plan> plan = adapter.findById("PL999999");
+
+        assertTrue(plan.isEmpty());
     }
 }

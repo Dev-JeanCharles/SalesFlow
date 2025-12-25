@@ -3,6 +3,7 @@ package com.salesflow.plan_service.infrastructure.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.salesflow.plan_service.application.dto.PlanRequestDto;
 import com.salesflow.plan_service.application.dto.PlanResponseDto;
+import com.salesflow.plan_service.application.exception.types.NotFoundException;
 import com.salesflow.plan_service.application.port.in.CreatePlanUseCase;
 import com.salesflow.plan_service.application.port.in.GetPlanByIdUseCase;
 import com.salesflow.plan_service.domain.enums.TypeEnum;
@@ -18,6 +19,7 @@ import java.math.BigDecimal;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -117,5 +119,37 @@ class PlanControllerTest {
                 .andExpect(jsonPath("$.code").value("INVALID_REQUEST"));
 
         verifyNoInteractions(createPlanUseCase);
+    }
+
+    @Test
+    void shouldReturnPlanWhenFound() throws Exception {
+        PlanResponseDto response = new PlanResponseDto(
+                "PL000001",
+                "Plano Controle",
+                TypeEnum.CONTROLE,
+                BigDecimal.valueOf(99.90),
+                "24/12/2025",
+                true,
+                "Plano controle"
+        );
+
+        when(getPlanByIdUseCase.getById("PL000001"))
+                .thenReturn(response);
+
+        mockMvc.perform(get("/plans")
+                        .param("plan_id", "PL000001"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.plan_id").value("PL000001"))
+                .andExpect(jsonPath("$.monthly_price").value(99.90));
+    }
+
+    @Test
+    void shouldReturn404WhenPlanNotFound() throws Exception {
+        when(getPlanByIdUseCase.getById("PL999999"))
+                .thenThrow(new NotFoundException("PLAN_NOT_FOUND", "Plano não encontrado"));
+
+        mockMvc.perform(get("/plans")
+                        .param("plan_id", "PL999999"))
+                .andExpect(status().isNotFound());
     }
 }
