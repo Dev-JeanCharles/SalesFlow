@@ -1,6 +1,6 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '4.0.1'
+	id 'org.springframework.boot' version '3.2.5'
 	id 'io.spring.dependency-management' version '1.1.7'
 }
 
@@ -14,53 +14,37 @@ java {
 	}
 }
 
-configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
-	}
-}
-
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	//JPA
+	// WEB
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// JPA
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	//SECURITY
+
+	// SECURITY
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 
-	//VALIDATION
+	// VALIDATION
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 
-	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
-	compileOnly 'org.projectlombok:lombok'
+	// DB
 	runtimeOnly 'org.postgresql:postgresql'
+
+
+	// LOMBOK
+	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa-test'
-	testImplementation 'org.springframework.boot:spring-boot-starter-security-test'
-	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// TESTS (APENAS ISSO)
+	testImplementation 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
-}
-tasks.withType(Test) {
-	enabled = false
-}
-
-// -------------------- Configuração para local.env --------------------
-tasks.named('bootRun') {
-	doFirst {
-		def envFile = file('local.env')
-		if (envFile.exists()) {
-			envFile.eachLine { line ->
-				if (!line.startsWith('#') && line.contains('=')) {
-					def (key, value) = line.split('=', 2)
-					environment key, value
-				}
-			}
-		}
-	}
 }
