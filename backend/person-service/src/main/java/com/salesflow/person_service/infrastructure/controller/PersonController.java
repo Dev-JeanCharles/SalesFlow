@@ -30,7 +30,7 @@ public class PersonController {
         return ResponseEntity.status(HttpStatus.CREATED).body(saved);
     }
 
-    @GetMapping
+    @GetMapping("/{all}")
     public ResponseEntity<List<PersonResponseDto>> getAllPersons() {
 
         List<PersonResponseDto> persons = getAllPersonsUseCase.getAllPersons();
@@ -38,8 +38,9 @@ public class PersonController {
         return ResponseEntity.status(HttpStatus.OK).body(persons);
     }
 
-    @GetMapping("/{personId}")
-    public ResponseEntity<PersonResponseDto> getPersonById(@PathVariable String personId) {
+    @GetMapping
+    public ResponseEntity<PersonResponseDto> getPersonById(
+            @RequestParam("person_id") String personId) {
 
         PersonResponseDto person = getPersonByIdUseCase.getPersonById(personId);
 
