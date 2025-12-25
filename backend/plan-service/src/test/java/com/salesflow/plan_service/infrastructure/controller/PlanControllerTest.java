@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.salesflow.plan_service.application.dto.PlanRequestDto;
 import com.salesflow.plan_service.application.dto.PlanResponseDto;
 import com.salesflow.plan_service.application.port.in.CreatePlanUseCase;
+import com.salesflow.plan_service.application.port.in.GetPlanByIdUseCase;
 import com.salesflow.plan_service.domain.enums.TypeEnum;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,9 @@ class PlanControllerTest {
 
     @MockBean
     private CreatePlanUseCase createPlanUseCase;
+
+    @MockBean
+    private GetPlanByIdUseCase getPlanByIdUseCase;
 
     @Test
     void shouldCreatePlanSuccessfully() throws Exception {

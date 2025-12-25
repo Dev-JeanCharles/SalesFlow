@@ -82,6 +82,12 @@ public class GlobalExceptionHandler {
                 .body(ErrorResponse.of("INVALID_REQUEST", message));
     }
 
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<String> handleNotFound(RuntimeException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body(ex.getMessage());
+    }
+
     // Fallback técnico (infra)
     @ExceptionHandler(DataAccessException.class)
     public ResponseEntity<ErrorResponse> handleSpringData(DataAccessException ex) {

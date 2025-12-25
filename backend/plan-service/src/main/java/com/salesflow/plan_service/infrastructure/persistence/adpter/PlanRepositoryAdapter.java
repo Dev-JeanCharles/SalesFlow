@@ -6,6 +6,8 @@ import com.salesflow.plan_service.infrastructure.persistence.entity.PlanJpa;
 import com.salesflow.plan_service.infrastructure.persistence.repository.PlanJpaRepository;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
 @Component
 public class PlanRepositoryAdapter implements PlanRepositoryPort {
 
@@ -36,6 +38,23 @@ public class PlanRepositoryAdapter implements PlanRepositoryPort {
                 saved.getCreated(),
                 saved.isActive(),
                 saved.getDescription()
+        );
+    }
+
+    public Optional<Plan> findById(String planId) {
+        return repository.findById(planId)
+                .map(this::toDomain);
+    }
+
+    private Plan toDomain(PlanJpa jpa) {
+        return new Plan(
+                jpa.getPlanId(),
+                jpa.getName(),
+                jpa.getType(),
+                jpa.getMonthlyPrice(),
+                jpa.getCreated(),
+                jpa.isActive(),
+                jpa.getDescription()
         );
     }
 }

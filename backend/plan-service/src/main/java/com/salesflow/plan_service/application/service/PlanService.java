@@ -4,6 +4,7 @@ import com.salesflow.plan_service.application.dto.PlanRequestDto;
 import com.salesflow.plan_service.application.dto.PlanResponseDto;
 import com.salesflow.plan_service.application.mapper.PlanMapper;
 import com.salesflow.plan_service.application.port.in.CreatePlanUseCase;
+import com.salesflow.plan_service.application.port.in.GetPlanByIdUseCase;
 import com.salesflow.plan_service.domain.model.Plan;
 import com.salesflow.plan_service.domain.port.in.PlanRepositoryPort;
 import com.salesflow.plan_service.infrastructure.persistence.generator.PlanIdGenerator;
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 
 @Service
-public class PlanService implements CreatePlanUseCase {
+public class PlanService implements CreatePlanUseCase, GetPlanByIdUseCase {
 
     private final PlanRepositoryPort planRepositoryPort;
     private final PlanIdGenerator planIdGenerator;
@@ -34,5 +35,15 @@ public class PlanService implements CreatePlanUseCase {
         Plan saved = planRepositoryPort.save(plan);
 
         return PlanMapper.toDto(saved);
+    }
+
+    @Override
+    public PlanResponseDto getById(String planId) {
+        Plan plan = planRepositoryPort.findById(planId)
+                .orElseThrow(() ->
+                        new RuntimeException("Plano não encontrado: " + planId)
+                );
+
+        return PlanMapper.toDto(plan);
     }
 }
