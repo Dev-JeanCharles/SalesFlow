@@ -11,4 +11,6 @@ public interface PersonRepositoryPort {
     Optional<Person> findById(String personId);
     List<PersonResponseDto> findAll();
     boolean existsByTaxIdentifierOrNameAndBirthDate(String taxIdentifier, String name, java.time.LocalDate birthDate);
+
+    Optional<Person> findByTaxIdentifier(String taxIdentifier);
 }

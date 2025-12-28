@@ -1,12 +1,12 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '4.0.1'
+	id 'org.springframework.boot' version '3.2.5'
 	id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'com.salesflow'
 version = '0.0.1-SNAPSHOT'
-description = 'Esse é um microsserviço de venda do projeto SalesFlow.'
+description = 'Microsserviço de plano do projeto SalesFlow.'
 
 java {
 	toolchain {
@@ -14,27 +14,42 @@ java {
 	}
 }
 
-configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
-	}
-}
-
 repositories {
 	mavenCentral()
 }
 
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:2023.0.4"
+	}
+}
+
 dependencies {
+	// WEB
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// JPA
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// SECURITY
 	implementation 'org.springframework.boot:spring-boot-starter-security'
-	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
-	compileOnly 'org.projectlombok:lombok'
+
+	// VALIDATION
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	// FEIGN
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+	// DB
 	runtimeOnly 'org.postgresql:postgresql'
+
+	// LOMBOK
+	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa-test'
-	testImplementation 'org.springframework.boot:spring-boot-starter-security-test'
-	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// TESTS
+	testImplementation 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 tasks.named('test') {

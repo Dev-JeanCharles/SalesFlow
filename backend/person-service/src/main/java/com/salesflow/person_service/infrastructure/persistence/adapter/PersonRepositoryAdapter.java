@@ -73,4 +73,17 @@ public class PersonRepositoryAdapter implements PersonRepositoryPort {
     public boolean existsByTaxIdentifierOrNameAndBirthDate(String taxIdentifier, String name, LocalDate birthDate) {
         return repository.existsByTaxIdentifierOrNameAndBirthDate(taxIdentifier, name, birthDate);
     }
+
+    @Override
+    public Optional<Person> findByTaxIdentifier(String taxIdentifier) {
+        return repository.findByTaxIdentifier(taxIdentifier)
+                .map(saved -> new Person(
+                        saved.getPersonId(),
+                        saved.getName(),
+                        saved.getTaxIdentifier(),
+                        saved.getPersonStatus(),
+                        saved.getCreated(),
+                        saved.getBirthDate()
+                ));
+    }
 }

@@ -5,6 +5,7 @@ import com.salesflow.person_service.application.dto.PersonResponseDto;
 import com.salesflow.person_service.application.porters.in.CreatePersonUseCase;
 import com.salesflow.person_service.application.porters.in.GetAllPersonsUseCase;
 import com.salesflow.person_service.application.porters.in.GetPersonByIdUseCase;
+import com.salesflow.person_service.application.porters.in.GetPersonByTaxIdentifierUseCase;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -20,6 +21,7 @@ public class PersonController {
 
     private final CreatePersonUseCase createPersonUseCase;
     private final GetPersonByIdUseCase getPersonByIdUseCase;
+    private final GetPersonByTaxIdentifierUseCase getPersonByTaxIdentifierUseCase;
     private final GetAllPersonsUseCase getAllPersonsUseCase;
 
     @PostMapping
@@ -38,11 +40,20 @@ public class PersonController {
         return ResponseEntity.status(HttpStatus.OK).body(persons);
     }
 
-    @GetMapping
+    @GetMapping("/{person}")
     public ResponseEntity<PersonResponseDto> getPersonById(
             @RequestParam("person_id") String personId) {
 
         PersonResponseDto person = getPersonByIdUseCase.getPersonById(personId);
+
+        return ResponseEntity.status(HttpStatus.OK).body(person);
+    }
+
+    @GetMapping
+    public ResponseEntity<PersonResponseDto> getTaxIdentifierId(
+            @RequestParam("tax_identifier") String taxIdentifier) {
+
+        PersonResponseDto person = getPersonByTaxIdentifierUseCase.getPerson(taxIdentifier);
 
         return ResponseEntity.status(HttpStatus.OK).body(person);
     }

@@ -8,6 +8,7 @@ import com.salesflow.person_service.application.mapper.PersonMapper;
 import com.salesflow.person_service.application.porters.in.CreatePersonUseCase;
 import com.salesflow.person_service.application.porters.in.GetAllPersonsUseCase;
 import com.salesflow.person_service.application.porters.in.GetPersonByIdUseCase;
+import com.salesflow.person_service.application.porters.in.GetPersonByTaxIdentifierUseCase;
 import com.salesflow.person_service.application.porters.out.PersonRepositoryPort;
 import com.salesflow.person_service.domain.models.Person;
 import com.salesflow.person_service.infrastructure.persistence.generator.PersonIdGenerator;
@@ -18,7 +19,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class PersonService implements CreatePersonUseCase, GetPersonByIdUseCase, GetAllPersonsUseCase {
+public class PersonService implements CreatePersonUseCase, GetPersonByIdUseCase, GetAllPersonsUseCase, GetPersonByTaxIdentifierUseCase {
 
     private final PersonIdGenerator personIdGenerator;
     private final PersonRepositoryPort personRepositoryPort;
@@ -55,5 +56,12 @@ public class PersonService implements CreatePersonUseCase, GetPersonByIdUseCase,
     @Override
     public List<PersonResponseDto> getAllPersons() {
         return personRepositoryPort.findAll();
+    }
+
+    @Override
+    public PersonResponseDto getPerson(String taxIdentifier) {
+        Person person = personRepositoryPort.findByTaxIdentifier(taxIdentifier)
+                .orElseThrow(()-> new NotFoundException("Pessoa não encontrada com ID: " + taxIdentifier));
+        return PersonMapper.toDto(person);
     }
 }
