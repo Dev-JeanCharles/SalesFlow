@@ -1,6 +1,7 @@
 package com.salesflow.sales_service.infrastructure.persistence.adapter;
 
 
+import com.salesflow.sales_service.domain.enums.StatusEnum;
 import com.salesflow.sales_service.domain.model.BillingHistory;
 import com.salesflow.sales_service.domain.model.Sale;
 import com.salesflow.sales_service.domain.port.in.SaleRepositoryPort;
@@ -33,6 +34,15 @@ public class SaleRepositoryAdapter implements SaleRepositoryPort {
         return repository.findById(saleId)
                 .map(this::toDomain);
     }
+
+    @Override
+    public boolean existsActiveSaleByTaxIdentifier(String taxIdentifier) {
+        return repository.existsByTaxIdentifierAndStatus(
+                taxIdentifier,
+                StatusEnum.ACTIVE
+        );
+    }
+
 
     /* ======================
        Mappers
@@ -106,5 +116,6 @@ public class SaleRepositoryAdapter implements SaleRepositoryPort {
                 jpa.getPaymentMethod()
         );
     }
+
 
 }

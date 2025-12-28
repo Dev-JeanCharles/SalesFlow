@@ -42,6 +42,7 @@ public class PlanService implements CreateSalesUseCase {
 
         var person = validatePerson(request.getTaxIdentifier());
         var plan = validatePlan(request.getPlanId());
+        validateNoActiveSale(person.taxIdentifier());
 
         List<BillingHistory> billingHistory = List.of(
                 new BillingHistory(
@@ -111,6 +112,15 @@ public class PlanService implements CreateSalesUseCase {
         }
 
         return plan;
+    }
+
+    private void validateNoActiveSale(String taxIdentifier) {
+
+        if (repositoryPort.existsActiveSaleByTaxIdentifier(taxIdentifier)) {
+            throw new ProposalNotAllowedException(
+                    "Não é possível oferecer proposta: cliente já possui um plano ativo"
+            );
+        }
     }
 
 }
