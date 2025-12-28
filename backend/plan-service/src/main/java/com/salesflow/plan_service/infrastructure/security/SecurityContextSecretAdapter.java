@@ -1,6 +1,6 @@
 package com.salesflow.plan_service.infrastructure.security;
 
-import com.salesflow.plan_service.domain.port.SecretAuthenticationPort.SecretAuthenticationPort;
+import com.salesflow.plan_service.domain.port.in.SecretAuthenticationPort;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 @Component

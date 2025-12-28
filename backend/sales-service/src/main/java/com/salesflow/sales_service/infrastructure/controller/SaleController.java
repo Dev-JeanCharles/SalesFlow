@@ -24,7 +24,7 @@ public class SaleController {
     public ResponseEntity<String> createSale(@RequestBody SaleRequestDto saleRequestDto) {
         System.out.println("Recebido saleDto: " + saleRequestDto.getTaxIdentifier());
 
-        createSalesUseCase.createPlan(saleRequestDto);
+        createSalesUseCase.createSale(saleRequestDto);
 
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body("Venda criada com sucesso para: " + saleRequestDto.getTaxIdentifier());

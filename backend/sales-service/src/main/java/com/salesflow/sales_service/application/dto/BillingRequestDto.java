@@ -13,10 +13,6 @@ public class BillingRequestDto {
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime nextBillingDate;
 
-    @JsonProperty("last_payment_date")
-    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
-    private LocalDateTime lastPaymentDate;
-
     @JsonProperty("payment_method")
     private String paymentMethod;
 
