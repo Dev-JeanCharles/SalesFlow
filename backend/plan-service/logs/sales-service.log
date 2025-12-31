@@ -916,3 +916,104 @@ This generated password is for development use only. Your security configuration
 2025-12-31 16:28:22.829 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-12-31 16:28:22.831 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-12-31 16:28:22.834 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 16:28:25.801 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-12-31 16:28:25.845 INFO  [main] c.s.s.SalesServiceApplication - Starting SalesServiceApplication using Java 17.0.6 with PID 6344 (C:\workspace\new_backend\backend\sales-service\build\classes\java\main started by jeanc in C:\workspace\new_backend\backend\plan-service)
+2025-12-31 16:28:25.846 INFO  [main] c.s.s.SalesServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-31 16:28:26.435 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:28:26.481 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
+2025-12-31 16:28:26.634 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=37f01d4c-e819-3296-bc10-0e692b9b90b1
+2025-12-31 16:28:26.957 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 7072 (http)
+2025-12-31 16:28:26.965 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7072"]
+2025-12-31 16:28:26.966 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:28:26.966 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-31 16:28:27.022 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:28:27.023 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1141 ms
+2025-12-31 16:28:27.135 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:28:27.190 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-12-31 16:28:27.221 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:28:27.416 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:28:27.442 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:28:27.559 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@19ec5357
+2025-12-31 16:28:27.561 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:28:27.585 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-31 16:28:28.363 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:28:28.417 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:28:29.206 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:28:29.326 WARN  [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 1d005dc6-d0dd-4154-ac1b-b55c82a265f2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-31 16:28:29.481 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@10bf2185, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14c06f50, org.springframework.security.web.context.SecurityContextHolderFilter@4474c514, org.springframework.security.web.header.HeaderWriterFilter@f61b92d, org.springframework.web.filter.CorsFilter@6230a15a, org.springframework.security.web.authentication.logout.LogoutFilter@65b17373, com.salesflow.sales_service.infrastructure.security.ApiKeyAuthenticationFilter@7225f871, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fc44b4b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c8e4810, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bff4cb9, org.springframework.security.web.access.ExceptionTranslationFilter@9198fe3, org.springframework.security.web.access.intercept.AuthorizationFilter@808f65]
+2025-12-31 16:28:29.859 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7072"]
+2025-12-31 16:28:29.867 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 7072 (http) with context path ''
+2025-12-31 16:28:30.373 INFO  [lifecycle-thread-1] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 started
+2025-12-31 16:28:30.389 INFO  [main] c.s.s.SalesServiceApplication - Started SalesServiceApplication in 5.186 seconds (process running for 5.703)
+2025-12-31 16:28:35.450 INFO  [http-nio-7072-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 16:28:35.450 INFO  [http-nio-7072-exec-3] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 16:28:35.451 INFO  [http-nio-7072-exec-3] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 16:28:35.546 INFO  [http-nio-7072-exec-3] c.s.s.i.controller.SaleController - [CONTROLLER][SALE] Create sale request received | taxIdentifier=11111111115
+2025-12-31 16:28:35.546 INFO  [http-nio-7072-exec-3] c.s.s.a.service.PlanService - [SERVICE][SALE] Starting sale creation | taxIdentifier=11111111115 | planId=PL000003
+2025-12-31 16:28:35.546 INFO  [http-nio-7072-exec-3] c.s.s.i.g.adapter.PersonAdapter - [GATEWAY][PERSON] Fetching person | personId=11111111115
+2025-12-31 16:28:35.575 INFO  [http-nio-7072-exec-3] c.s.s.i.g.adapter.PersonAdapter - [GATEWAY][PERSON] Person found | personId=11111111115 | status=ACTIVE
+2025-12-31 16:28:35.575 INFO  [http-nio-7072-exec-3] c.s.s.i.gateway.adapter.PlanAdapter - [GATEWAY][PLAN] Fetching plan | planId=PL000003
+2025-12-31 16:28:35.585 INFO  [http-nio-7072-exec-3] c.s.s.i.gateway.adapter.PlanAdapter - [GATEWAY][PLAN] Plan found | planId=PL000003 | active=true
+2025-12-31 16:28:35.751 INFO  [http-nio-7072-exec-3] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Sale saved successfully | saleId=348bafbc | status=PENDING
+2025-12-31 16:28:35.752 INFO  [http-nio-7072-exec-3] c.s.s.a.service.PlanService - [SERVICE][SALE] Sale created successfully | saleId=348bafbc | taxIdentifier=11111111115
+2025-12-31 16:28:35.752 INFO  [http-nio-7072-exec-3] c.s.s.i.controller.SaleController - [CONTROLLER][SALE] Sale created successfully | taxIdentifier=11111111115
+2025-12-31 16:29:00.025 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:29:00.049 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=10
+2025-12-31 16:29:00.050 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 10 pending sales
+2025-12-31 16:29:00.050 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:30:00.009 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:30:00.023 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=10
+2025-12-31 16:30:00.023 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 10 pending sales
+2025-12-31 16:30:00.023 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:31:00.012 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:31:00.028 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=12
+2025-12-31 16:31:00.028 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 12 pending sales
+2025-12-31 16:31:00.028 INFO  [scheduling-1] c.s.s.i.m.s.a.SqsProducerAdapter - [SQS][PRODUCER] Sending sale activation message | queue=sale-activation-queue | saleId=b600b8fe
+2025-12-31 16:31:00.058 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Activation message sent | saleId=b600b8fe
+2025-12-31 16:31:00.058 INFO  [scheduling-1] c.s.s.i.m.s.a.SqsProducerAdapter - [SQS][PRODUCER] Sending sale activation message | queue=sale-activation-queue | saleId=bc1f20df
+2025-12-31 16:31:00.065 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Activation message sent | saleId=bc1f20df
+2025-12-31 16:31:00.065 INFO  [scheduling-1] c.s.s.i.m.s.a.SqsProducerAdapter - [SQS][PRODUCER] Sending sale activation message | queue=sale-activation-queue | saleId=f3c2e003
+2025-12-31 16:31:00.066 INFO  [io.awspring.cloud.sqs.sqsListenerEndpointContainer#0-1] c.s.s.i.m.l.SaleActivationListener - [SQS][LISTENER] Message received | queue=sale-activation-queue | saleId=b600b8fe
+2025-12-31 16:31:00.070 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Activation message sent | saleId=f3c2e003
+2025-12-31 16:31:00.071 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:31:00.074 INFO  [io.awspring.cloud.sqs.sqsListenerEndpointContainer#0-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Sale saved successfully | saleId=b600b8fe | status=ACTIVE
+2025-12-31 16:31:00.074 INFO  [io.awspring.cloud.sqs.sqsListenerEndpointContainer#0-1] c.s.s.i.m.l.SaleActivationListener - [SQS][LISTENER] Sale activated successfully | saleId=b600b8fe
+2025-12-31 16:31:00.089 INFO  [io.awspring.cloud.sqs.sqsListenerEndpointContainer#0-3] c.s.s.i.m.l.SaleActivationListener - [SQS][LISTENER] Message received | queue=sale-activation-queue | saleId=f3c2e003
+2025-12-31 16:31:00.089 INFO  [io.awspring.cloud.sqs.sqsListenerEndpointContainer#0-2] c.s.s.i.m.l.SaleActivationListener - [SQS][LISTENER] Message received | queue=sale-activation-queue | saleId=bc1f20df
+2025-12-31 16:31:00.093 INFO  [io.awspring.cloud.sqs.sqsListenerEndpointContainer#0-3] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Sale saved successfully | saleId=f3c2e003 | status=ACTIVE
+2025-12-31 16:31:00.093 INFO  [io.awspring.cloud.sqs.sqsListenerEndpointContainer#0-2] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Sale saved successfully | saleId=bc1f20df | status=ACTIVE
+2025-12-31 16:31:00.093 INFO  [io.awspring.cloud.sqs.sqsListenerEndpointContainer#0-3] c.s.s.i.m.l.SaleActivationListener - [SQS][LISTENER] Sale activated successfully | saleId=f3c2e003
+2025-12-31 16:31:00.093 INFO  [io.awspring.cloud.sqs.sqsListenerEndpointContainer#0-2] c.s.s.i.m.l.SaleActivationListener - [SQS][LISTENER] Sale activated successfully | saleId=bc1f20df
+2025-12-31 16:32:00.014 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:32:00.026 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=9
+2025-12-31 16:32:00.026 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 9 pending sales
+2025-12-31 16:32:00.026 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:33:00.017 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:33:00.026 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=9
+2025-12-31 16:33:00.026 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 9 pending sales
+2025-12-31 16:33:00.026 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:34:00.001 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:34:00.013 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=9
+2025-12-31 16:34:00.013 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 9 pending sales
+2025-12-31 16:34:00.013 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:35:00.015 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:35:00.027 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=9
+2025-12-31 16:35:00.027 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 9 pending sales
+2025-12-31 16:35:00.027 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:36:00.013 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:36:00.029 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=9
+2025-12-31 16:36:00.029 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 9 pending sales
+2025-12-31 16:36:00.029 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:37:00.006 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:37:00.019 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=9
+2025-12-31 16:37:00.020 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 9 pending sales
+2025-12-31 16:37:00.020 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:37:50.362 INFO  [lifecycle-thread-3] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 stopped
+2025-12-31 16:37:52.454 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:37:52.456 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:37:52.458 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

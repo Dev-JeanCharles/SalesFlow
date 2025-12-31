@@ -2,6 +2,7 @@ package com.salesflow.sales_service.infrastructure.gateway.adapter;
 
 import com.salesflow.sales_service.application.port.out.PlanPort;
 import com.salesflow.sales_service.infrastructure.gateway.PlanGateway;
+import com.salesflow.sales_service.infrastructure.gateway.config.SessionCookieGenerator;
 import com.salesflow.sales_service.infrastructure.gateway.dto.PlanDto;
 import feign.FeignException;
 import org.slf4j.Logger;
@@ -16,13 +17,17 @@ public class PlanAdapter implements PlanPort {
     private static final Logger log = LoggerFactory.getLogger(PlanAdapter.class);
 
     private final PlanGateway planGateway;
+    private final SessionCookieGenerator cookieGenerator;
 
-    public PlanAdapter(PlanGateway planGateway) {
+    public PlanAdapter(PlanGateway planGateway, SessionCookieGenerator cookieGenerator) {
         this.planGateway = planGateway;
+        this.cookieGenerator = cookieGenerator;
     }
 
     @Override
     public Optional<PlanDto> getPlanById(String planId) {
+
+        String sessionCookie = cookieGenerator.generate();
 
         log.info(
                 "[GATEWAY][PLAN] Fetching plan | planId={}",
@@ -33,7 +38,7 @@ public class PlanAdapter implements PlanPort {
             PlanDto plan = planGateway.getPlan(
                     planId,
                     "test",
-                    "JSESSIONID=8D55E404F060E1AC85297A4D1B9817A5"
+                    sessionCookie
             );
 
             log.info(
