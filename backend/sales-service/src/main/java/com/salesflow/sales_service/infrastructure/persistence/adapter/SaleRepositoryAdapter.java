@@ -10,6 +10,7 @@ import com.salesflow.sales_service.infrastructure.persistence.entity.SaleJpa;
 import com.salesflow.sales_service.infrastructure.persistence.repository.SaleJpaRepository;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -41,6 +42,14 @@ public class SaleRepositoryAdapter implements SaleRepositoryPort {
                 taxIdentifier,
                 StatusEnum.ACTIVE
         );
+    }
+
+    @Override
+    public List<Sale> findPendingSales() {
+        return repository.findByStatus(StatusEnum.PENDING)
+                .stream()
+                .map(this::toDomain)
+                .toList();
     }
 
 

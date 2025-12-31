@@ -1,7 +1,7 @@
 package com.salesflow.sales_service.domain.enums;
 
 public enum StatusEnum {
-    PENDENT,
+    PENDING,
     ACTIVE,
     CANCELED,
     SUSPENDED,

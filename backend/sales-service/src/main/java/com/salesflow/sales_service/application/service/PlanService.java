@@ -122,5 +122,4 @@ public class PlanService implements CreateSalesUseCase {
             );
         }
     }
-
 }

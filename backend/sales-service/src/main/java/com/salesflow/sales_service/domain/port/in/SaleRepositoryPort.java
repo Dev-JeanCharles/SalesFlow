@@ -3,6 +3,7 @@ package com.salesflow.sales_service.domain.port.in;
 import com.salesflow.sales_service.domain.enums.StatusEnum;
 import com.salesflow.sales_service.domain.model.Sale;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface SaleRepositoryPort {
@@ -12,4 +13,6 @@ public interface SaleRepositoryPort {
     Optional<Sale> findById(String saleId);
 
     boolean existsActiveSaleByTaxIdentifier(String taxIdentifier);
+
+    List<Sale> findPendingSales();
 }

@@ -70,7 +70,7 @@ public class Sale {
                 startDate,
                 null,
                 billingDay,
-                StatusEnum.PENDENT,
+                StatusEnum.PENDING,
                 LocalDateTime.now(),
                 null,
                 billingHistory != null ? billingHistory : List.of()
@@ -153,5 +153,14 @@ public class Sale {
     ) {
         BigDecimal finalPrice = monthlyPrice.subtract(discount);
         return finalPrice.signum() < 0 ? BigDecimal.ZERO : finalPrice;
+    }
+
+
+    public void activate() {
+        if (this.status != StatusEnum.PENDING) {
+            throw new IllegalStateException("Only pending sales can be activated");
+        }
+
+        this.status = StatusEnum.ACTIVE;
     }
 }

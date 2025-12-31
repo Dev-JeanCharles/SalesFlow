@@ -1,3 +1,5 @@
+version: "3.8"
+
 services:
   person-db:
     image: postgres:15
@@ -12,16 +14,19 @@ services:
     volumes:
       - person-db-data:/var/lib/postgresql/data
 
-#  plan-service:
-#    build: .
-#    container_name: person-service
-#    restart: always
-#    env_file:
-#      - ./local.env
-#    ports:
-#      - "7071:7071"
-#    depends_on:
-#      - person-db
+  localstack:
+    image: localstack/localstack:latest
+    container_name: salesflow-localstack
+    restart: always
+    ports:
+      - "4566:4566"
+    environment:
+      SERVICES: sqs
+      AWS_DEFAULT_REGION: us-east-1
+      DEBUG: 1
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./localstack/init:/etc/localstack/init/ready.d"
 
 volumes:
   person-db-data:
