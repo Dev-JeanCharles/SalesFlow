@@ -1,0 +1,918 @@
+2025-12-31 15:38:26.185 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-12-31 15:38:26.225 INFO  [main] c.s.s.SalesServiceApplication - Starting SalesServiceApplication using Java 17.0.6 with PID 15908 (C:\workspace\new_backend\backend\sales-service\build\classes\java\main started by jeanc in C:\workspace\new_backend\backend\plan-service)
+2025-12-31 15:38:26.225 DEBUG [main] c.s.s.SalesServiceApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-12-31 15:38:26.226 INFO  [main] c.s.s.SalesServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-31 15:38:26.800 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 15:38:26.849 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interface.
+2025-12-31 15:38:26.997 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=37f01d4c-e819-3296-bc10-0e692b9b90b1
+2025-12-31 15:38:27.282 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 7072 (http)
+2025-12-31 15:38:27.291 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7072"]
+2025-12-31 15:38:27.292 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 15:38:27.292 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-31 15:38:27.348 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 15:38:27.348 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1086 ms
+2025-12-31 15:38:27.462 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 15:38:27.516 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-12-31 15:38:27.545 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 15:38:27.737 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 15:38:27.760 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 15:38:27.870 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2dd8a273
+2025-12-31 15:38:27.872 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 15:38:27.896 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-31 15:38:27.917 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@6d9428f3) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@4ac19bc6)
+2025-12-31 15:38:27.917 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2a075e70) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@492c9892)
+2025-12-31 15:38:28.649 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 15:38:28.703 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 15:38:29.439 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 15:38:29.568 WARN  [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 5b54b655-9787-4c62-8b8f-fad14285a6ab
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-31 15:38:29.726 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2c3f47ba, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ca9ffc0, org.springframework.security.web.context.SecurityContextHolderFilter@29509774, org.springframework.security.web.header.HeaderWriterFilter@7d0bbc49, org.springframework.web.filter.CorsFilter@e316971, org.springframework.security.web.authentication.logout.LogoutFilter@4f1a4d61, com.salesflow.sales_service.infrastructure.security.ApiKeyAuthenticationFilter@808f65, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6cc9f35d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f61b92d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56540a58, org.springframework.security.web.access.ExceptionTranslationFilter@4467088e, org.springframework.security.web.access.intercept.AuthorizationFilter@49ed3b76]
+2025-12-31 15:38:30.111 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7072"]
+2025-12-31 15:38:30.120 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 7072 (http) with context path ''
+2025-12-31 15:38:30.627 INFO  [lifecycle-thread-1] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 started
+2025-12-31 15:38:30.637 INFO  [main] c.s.s.SalesServiceApplication - Started SalesServiceApplication in 5.059 seconds (process running for 5.852)
+2025-12-31 15:39:50.695 INFO  [lifecycle-thread-3] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 stopped
+2025-12-31 15:39:52.794 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 15:39:52.796 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 15:39:52.798 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 15:39:56.997 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-12-31 15:39:57.036 INFO  [main] c.s.s.SalesServiceApplication - Starting SalesServiceApplication using Java 17.0.6 with PID 31020 (C:\workspace\new_backend\backend\sales-service\build\classes\java\main started by jeanc in C:\workspace\new_backend\backend\plan-service)
+2025-12-31 15:39:57.038 DEBUG [main] c.s.s.SalesServiceApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-12-31 15:39:57.038 INFO  [main] c.s.s.SalesServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-31 15:39:57.617 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 15:39:57.666 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interface.
+2025-12-31 15:39:57.813 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=37f01d4c-e819-3296-bc10-0e692b9b90b1
+2025-12-31 15:39:58.100 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 7072 (http)
+2025-12-31 15:39:58.108 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7072"]
+2025-12-31 15:39:58.109 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 15:39:58.110 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-31 15:39:58.164 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 15:39:58.165 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1090 ms
+2025-12-31 15:39:58.284 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 15:39:58.338 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-12-31 15:39:58.370 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 15:39:58.576 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 15:39:58.602 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 15:39:58.711 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@59f76e56
+2025-12-31 15:39:58.713 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 15:39:58.738 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-31 15:39:58.760 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@4ac19bc6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@2a075e70)
+2025-12-31 15:39:58.760 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@492c9892) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@533e2f4)
+2025-12-31 15:39:59.497 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 15:39:59.551 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 15:40:00.304 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 15:40:00.434 WARN  [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 1c07e39e-e4b3-4a56-bfce-52d1f14c1ab1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-31 15:40:00.593 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ca9ffc0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e316971, org.springframework.security.web.context.SecurityContextHolderFilter@9198fe3, org.springframework.security.web.header.HeaderWriterFilter@7eb370c5, org.springframework.web.filter.CorsFilter@808f65, org.springframework.security.web.authentication.logout.LogoutFilter@21c7415e, com.salesflow.sales_service.infrastructure.security.ApiKeyAuthenticationFilter@56540a58, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f61b92d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@22277482, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15c0a8ad, org.springframework.security.web.access.ExceptionTranslationFilter@283074e8, org.springframework.security.web.access.intercept.AuthorizationFilter@1c33d539]
+2025-12-31 15:40:00.969 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7072"]
+2025-12-31 15:40:00.978 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 7072 (http) with context path ''
+2025-12-31 15:40:01.502 INFO  [lifecycle-thread-1] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 started
+2025-12-31 15:40:01.518 INFO  [main] c.s.s.SalesServiceApplication - Started SalesServiceApplication in 5.095 seconds (process running for 5.719)
+2025-12-31 15:41:00.016 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:41:00.121 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:41:00.141 ERROR [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.salesflow.sales_service.infrastructure.persistence.entity.SaleJpa.billingHistory: could not initialize proxy - no Session
+	at org.hibernate.collection.spi.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:634)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:217)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:613)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136)
+	at org.hibernate.collection.spi.PersistentBag.iterator(PersistentBag.java:371)
+	at java.base/java.util.Spliterators$IteratorSpliterator.estimateSize(Spliterators.java:1865)
+	at java.base/java.util.Spliterator.getExactSizeIfKnown(Spliterator.java:414)
+	at java.base/java.util.stream.AbstractPipeline.exactOutputSizeIfKnown(AbstractPipeline.java:470)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:574)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at com.salesflow.sales_service.infrastructure.persistence.adapter.SaleRepositoryAdapter.toDomain(SaleRepositoryAdapter.java:105)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at com.salesflow.sales_service.infrastructure.persistence.adapter.SaleRepositoryAdapter.findPendingSales(SaleRepositoryAdapter.java:52)
+	at com.salesflow.sales_service.application.scheduler.PendingSalesScheduler.processPendingSales(PendingSalesScheduler.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-12-31 15:42:00.008 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:42:00.010 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:42:00.013 ERROR [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.salesflow.sales_service.infrastructure.persistence.entity.SaleJpa.billingHistory: could not initialize proxy - no Session
+	at org.hibernate.collection.spi.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:634)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:217)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:613)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:136)
+	at org.hibernate.collection.spi.PersistentBag.iterator(PersistentBag.java:371)
+	at java.base/java.util.Spliterators$IteratorSpliterator.estimateSize(Spliterators.java:1865)
+	at java.base/java.util.Spliterator.getExactSizeIfKnown(Spliterator.java:414)
+	at java.base/java.util.stream.AbstractPipeline.exactOutputSizeIfKnown(AbstractPipeline.java:470)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:574)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at com.salesflow.sales_service.infrastructure.persistence.adapter.SaleRepositoryAdapter.toDomain(SaleRepositoryAdapter.java:105)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at com.salesflow.sales_service.infrastructure.persistence.adapter.SaleRepositoryAdapter.findPendingSales(SaleRepositoryAdapter.java:52)
+	at com.salesflow.sales_service.application.scheduler.PendingSalesScheduler.processPendingSales(PendingSalesScheduler.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-12-31 15:43:01.641 INFO  [lifecycle-thread-3] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 stopped
+2025-12-31 15:43:03.743 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 15:43:03.745 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 15:43:03.747 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 15:43:08.156 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-12-31 15:43:08.195 INFO  [main] c.s.s.SalesServiceApplication - Starting SalesServiceApplication using Java 17.0.6 with PID 32148 (C:\workspace\new_backend\backend\sales-service\build\classes\java\main started by jeanc in C:\workspace\new_backend\backend\plan-service)
+2025-12-31 15:43:08.196 DEBUG [main] c.s.s.SalesServiceApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-12-31 15:43:08.197 INFO  [main] c.s.s.SalesServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-31 15:43:08.784 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 15:43:08.833 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interface.
+2025-12-31 15:43:08.981 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=37f01d4c-e819-3296-bc10-0e692b9b90b1
+2025-12-31 15:43:09.279 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 7072 (http)
+2025-12-31 15:43:09.287 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7072"]
+2025-12-31 15:43:09.289 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 15:43:09.289 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-31 15:43:09.348 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 15:43:09.349 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1117 ms
+2025-12-31 15:43:09.470 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 15:43:09.529 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-12-31 15:43:09.560 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 15:43:09.756 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 15:43:09.779 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 15:43:09.893 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7b8b07ae
+2025-12-31 15:43:09.894 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 15:43:09.919 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-31 15:43:09.939 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@533e2f4) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@436a563f)
+2025-12-31 15:43:09.940 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@538e74fc) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7ecb9e17)
+2025-12-31 15:43:10.721 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 15:43:10.780 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 15:43:11.585 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 15:43:11.701 WARN  [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: c618834c-15ff-4427-9cd6-a4b5809ee44c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-31 15:43:11.856 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7225f871, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1bff4cb9, org.springframework.security.web.context.SecurityContextHolderFilter@1c8e4810, org.springframework.security.web.header.HeaderWriterFilter@4474c514, org.springframework.web.filter.CorsFilter@c521a79, org.springframework.security.web.authentication.logout.LogoutFilter@7e0fc5d0, com.salesflow.sales_service.infrastructure.security.ApiKeyAuthenticationFilter@6b0f50d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4dfe14d4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@309d9033, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36b4cbb8, org.springframework.security.web.access.ExceptionTranslationFilter@22277482, org.springframework.security.web.access.intercept.AuthorizationFilter@10bf2185]
+2025-12-31 15:43:12.243 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7072"]
+2025-12-31 15:43:12.251 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 7072 (http) with context path ''
+2025-12-31 15:43:12.758 INFO  [lifecycle-thread-1] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 started
+2025-12-31 15:43:12.773 INFO  [main] c.s.s.SalesServiceApplication - Started SalesServiceApplication in 5.21 seconds (process running for 5.717)
+2025-12-31 15:44:00.026 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:44:00.113 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:44:00.135 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 15:44:00.193 DEBUG [io.awspring.cloud.sqs.sqsListenerEndpointContainer#0-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.sale_id=?
+2025-12-31 15:44:00.196 DEBUG [io.awspring.cloud.sqs.sqsListenerEndpointContainer#0-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 15:44:00.213 DEBUG [io.awspring.cloud.sqs.sqsListenerEndpointContainer#0-1] org.hibernate.SQL - update sales set billing_day=?,canceled_at=?,created_at=?,discount=?,end_date=?,final_monthly_price=?,monthly_price=?,person_name=?,plan_id=?,plan_name=?,plan_type=?,start_date=?,status=?,tax_identifier=? where sale_id=?
+2025-12-31 15:45:00.017 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:45:00.019 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:46:00.007 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:46:00.009 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:47:00.009 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:47:00.012 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:48:00.012 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:48:00.014 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:49:00.004 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:49:00.006 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:50:00.004 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:50:00.006 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:51:00.009 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:51:00.011 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:52:00.002 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:52:00.003 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:53:00.002 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:53:00.003 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:54:00.011 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:54:00.012 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:55:00.001 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:55:00.003 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:56:00.016 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:56:00.018 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:57:00.006 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:57:00.008 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:58:00.007 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:58:00.009 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 15:59:00.011 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 15:59:00.013 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:00:00.013 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:00:00.014 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:01:00.006 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:01:00.008 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:02:00.003 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:02:00.004 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:03:00.007 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:03:00.009 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:04:00.011 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:04:00.014 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:05:00.012 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:05:00.013 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:06:00.010 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:06:00.011 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:06:21.013 INFO  [lifecycle-thread-3] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 stopped
+2025-12-31 16:06:23.112 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:06:23.115 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:06:23.118 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 16:06:27.280 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-12-31 16:06:27.320 INFO  [main] c.s.s.SalesServiceApplication - Starting SalesServiceApplication using Java 17.0.6 with PID 30936 (C:\workspace\new_backend\backend\sales-service\build\classes\java\main started by jeanc in C:\workspace\new_backend\backend\plan-service)
+2025-12-31 16:06:27.321 DEBUG [main] c.s.s.SalesServiceApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-12-31 16:06:27.321 INFO  [main] c.s.s.SalesServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-31 16:06:27.904 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:06:27.954 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interface.
+2025-12-31 16:06:28.109 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=37f01d4c-e819-3296-bc10-0e692b9b90b1
+2025-12-31 16:06:28.411 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 7072 (http)
+2025-12-31 16:06:28.419 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7072"]
+2025-12-31 16:06:28.421 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:06:28.421 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-31 16:06:28.479 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:06:28.479 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1122 ms
+2025-12-31 16:06:28.596 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:06:28.652 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-12-31 16:06:28.680 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:06:28.873 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:06:28.896 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:06:29.003 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@19ec5357
+2025-12-31 16:06:29.005 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:06:29.028 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-31 16:06:29.049 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@436a563f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@538e74fc)
+2025-12-31 16:06:29.049 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7ecb9e17) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6475e778)
+2025-12-31 16:06:29.818 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:06:29.890 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:06:30.700 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:06:30.828 WARN  [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 02a91120-0c50-4c90-b4e9-011bea31c212
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-31 16:06:30.985 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1bff4cb9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c521a79, org.springframework.security.web.context.SecurityContextHolderFilter@7e3062f0, org.springframework.security.web.header.HeaderWriterFilter@465eb466, org.springframework.web.filter.CorsFilter@6b0f50d8, org.springframework.security.web.authentication.logout.LogoutFilter@10cb1b89, com.salesflow.sales_service.infrastructure.security.ApiKeyAuthenticationFilter@36b4cbb8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@309d9033, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ebd80f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57cfd353, org.springframework.security.web.access.ExceptionTranslationFilter@670481b2, org.springframework.security.web.access.intercept.AuthorizationFilter@14c06f50]
+2025-12-31 16:06:31.364 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7072"]
+2025-12-31 16:06:31.374 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 7072 (http) with context path ''
+2025-12-31 16:06:31.884 INFO  [lifecycle-thread-1] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 started
+2025-12-31 16:06:31.894 INFO  [main] c.s.s.SalesServiceApplication - Started SalesServiceApplication in 5.181 seconds (process running for 5.726)
+2025-12-31 16:07:00.018 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:07:00.108 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:07:00.114 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 0 pending sales
+2025-12-31 16:07:00.115 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:08:00.003 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:08:00.005 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:08:00.007 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 0 pending sales
+2025-12-31 16:08:00.007 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:08:36.420 INFO  [http-nio-7072-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 16:08:36.420 INFO  [http-nio-7072-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 16:08:36.421 INFO  [http-nio-7072-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 16:08:36.574 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - select sj1_0.sale_id from sales sj1_0 where sj1_0.tax_identifier=? and sj1_0.status=? fetch first ? rows only
+2025-12-31 16:09:00.013 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:09:00.015 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:09:00.016 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 0 pending sales
+2025-12-31 16:09:00.016 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:09:20.752 DEBUG [http-nio-7072-exec-4] org.hibernate.SQL - select sj1_0.sale_id from sales sj1_0 where sj1_0.tax_identifier=? and sj1_0.status=? fetch first ? rows only
+2025-12-31 16:10:00.009 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:10:00.011 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:10:00.013 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 0 pending sales
+2025-12-31 16:10:00.013 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:10:06.410 DEBUG [http-nio-7072-exec-5] org.hibernate.SQL - select sj1_0.sale_id from sales sj1_0 where sj1_0.tax_identifier=? and sj1_0.status=? fetch first ? rows only
+2025-12-31 16:10:06.429 DEBUG [http-nio-7072-exec-5] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier,bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sales sj1_0 left join sale_billing_history bh1_0 on sj1_0.sale_id=bh1_0.sale_id where sj1_0.sale_id=?
+2025-12-31 16:10:06.443 DEBUG [http-nio-7072-exec-5] org.hibernate.SQL - select bhj1_0.payment_id,bhj1_0.payment_date,bhj1_0.payment_method,bhj1_0.payment_status,bhj1_0.payment_value from sale_billing_history bhj1_0 where bhj1_0.payment_id=?
+2025-12-31 16:10:06.464 DEBUG [http-nio-7072-exec-5] org.hibernate.SQL - insert into sales (billing_day,canceled_at,created_at,discount,end_date,final_monthly_price,monthly_price,person_name,plan_id,plan_name,plan_type,start_date,status,tax_identifier,sale_id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-12-31 16:10:06.471 DEBUG [http-nio-7072-exec-5] org.hibernate.SQL - insert into sale_billing_history (payment_date,payment_method,payment_status,payment_value,payment_id) values (?,?,?,?,?)
+2025-12-31 16:10:06.477 DEBUG [http-nio-7072-exec-5] org.hibernate.SQL - update sale_billing_history set sale_id=? where payment_id=?
+2025-12-31 16:10:51.201 DEBUG [http-nio-7072-exec-6] org.hibernate.SQL - select sj1_0.sale_id from sales sj1_0 where sj1_0.tax_identifier=? and sj1_0.status=? fetch first ? rows only
+2025-12-31 16:10:51.203 DEBUG [http-nio-7072-exec-6] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier,bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sales sj1_0 left join sale_billing_history bh1_0 on sj1_0.sale_id=bh1_0.sale_id where sj1_0.sale_id=?
+2025-12-31 16:10:51.205 DEBUG [http-nio-7072-exec-6] org.hibernate.SQL - select bhj1_0.payment_id,bhj1_0.payment_date,bhj1_0.payment_method,bhj1_0.payment_status,bhj1_0.payment_value from sale_billing_history bhj1_0 where bhj1_0.payment_id=?
+2025-12-31 16:10:51.207 DEBUG [http-nio-7072-exec-6] org.hibernate.SQL - insert into sales (billing_day,canceled_at,created_at,discount,end_date,final_monthly_price,monthly_price,person_name,plan_id,plan_name,plan_type,start_date,status,tax_identifier,sale_id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-12-31 16:10:51.208 DEBUG [http-nio-7072-exec-6] org.hibernate.SQL - insert into sale_billing_history (payment_date,payment_method,payment_status,payment_value,payment_id) values (?,?,?,?,?)
+2025-12-31 16:10:51.209 DEBUG [http-nio-7072-exec-6] org.hibernate.SQL - update sale_billing_history set sale_id=? where payment_id=?
+2025-12-31 16:11:00.004 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:11:00.006 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:11:00.013 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:11:00.017 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:11:00.017 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 2 pending sales
+2025-12-31 16:11:00.017 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:11:00.018 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:11:00.018 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:11:13.003 DEBUG [http-nio-7072-exec-7] org.hibernate.SQL - select sj1_0.sale_id from sales sj1_0 where sj1_0.tax_identifier=? and sj1_0.status=? fetch first ? rows only
+2025-12-31 16:11:13.006 DEBUG [http-nio-7072-exec-7] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier,bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sales sj1_0 left join sale_billing_history bh1_0 on sj1_0.sale_id=bh1_0.sale_id where sj1_0.sale_id=?
+2025-12-31 16:11:13.009 DEBUG [http-nio-7072-exec-7] org.hibernate.SQL - select bhj1_0.payment_id,bhj1_0.payment_date,bhj1_0.payment_method,bhj1_0.payment_status,bhj1_0.payment_value from sale_billing_history bhj1_0 where bhj1_0.payment_id=?
+2025-12-31 16:11:13.011 DEBUG [http-nio-7072-exec-7] org.hibernate.SQL - insert into sales (billing_day,canceled_at,created_at,discount,end_date,final_monthly_price,monthly_price,person_name,plan_id,plan_name,plan_type,start_date,status,tax_identifier,sale_id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-12-31 16:11:13.012 DEBUG [http-nio-7072-exec-7] org.hibernate.SQL - insert into sale_billing_history (payment_date,payment_method,payment_status,payment_value,payment_id) values (?,?,?,?,?)
+2025-12-31 16:11:13.013 DEBUG [http-nio-7072-exec-7] org.hibernate.SQL - update sale_billing_history set sale_id=? where payment_id=?
+2025-12-31 16:11:14.929 DEBUG [http-nio-7072-exec-8] org.hibernate.SQL - select sj1_0.sale_id from sales sj1_0 where sj1_0.tax_identifier=? and sj1_0.status=? fetch first ? rows only
+2025-12-31 16:11:14.931 DEBUG [http-nio-7072-exec-8] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier,bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sales sj1_0 left join sale_billing_history bh1_0 on sj1_0.sale_id=bh1_0.sale_id where sj1_0.sale_id=?
+2025-12-31 16:11:14.933 DEBUG [http-nio-7072-exec-8] org.hibernate.SQL - select bhj1_0.payment_id,bhj1_0.payment_date,bhj1_0.payment_method,bhj1_0.payment_status,bhj1_0.payment_value from sale_billing_history bhj1_0 where bhj1_0.payment_id=?
+2025-12-31 16:11:14.934 DEBUG [http-nio-7072-exec-8] org.hibernate.SQL - insert into sales (billing_day,canceled_at,created_at,discount,end_date,final_monthly_price,monthly_price,person_name,plan_id,plan_name,plan_type,start_date,status,tax_identifier,sale_id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-12-31 16:11:14.936 DEBUG [http-nio-7072-exec-8] org.hibernate.SQL - insert into sale_billing_history (payment_date,payment_method,payment_status,payment_value,payment_id) values (?,?,?,?,?)
+2025-12-31 16:11:14.937 DEBUG [http-nio-7072-exec-8] org.hibernate.SQL - update sale_billing_history set sale_id=? where payment_id=?
+2025-12-31 16:11:16.328 DEBUG [http-nio-7072-exec-9] org.hibernate.SQL - select sj1_0.sale_id from sales sj1_0 where sj1_0.tax_identifier=? and sj1_0.status=? fetch first ? rows only
+2025-12-31 16:11:16.330 DEBUG [http-nio-7072-exec-9] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier,bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sales sj1_0 left join sale_billing_history bh1_0 on sj1_0.sale_id=bh1_0.sale_id where sj1_0.sale_id=?
+2025-12-31 16:11:16.332 DEBUG [http-nio-7072-exec-9] org.hibernate.SQL - select bhj1_0.payment_id,bhj1_0.payment_date,bhj1_0.payment_method,bhj1_0.payment_status,bhj1_0.payment_value from sale_billing_history bhj1_0 where bhj1_0.payment_id=?
+2025-12-31 16:11:16.334 DEBUG [http-nio-7072-exec-9] org.hibernate.SQL - insert into sales (billing_day,canceled_at,created_at,discount,end_date,final_monthly_price,monthly_price,person_name,plan_id,plan_name,plan_type,start_date,status,tax_identifier,sale_id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-12-31 16:11:16.336 DEBUG [http-nio-7072-exec-9] org.hibernate.SQL - insert into sale_billing_history (payment_date,payment_method,payment_status,payment_value,payment_id) values (?,?,?,?,?)
+2025-12-31 16:11:16.337 DEBUG [http-nio-7072-exec-9] org.hibernate.SQL - update sale_billing_history set sale_id=? where payment_id=?
+2025-12-31 16:11:17.236 DEBUG [http-nio-7072-exec-10] org.hibernate.SQL - select sj1_0.sale_id from sales sj1_0 where sj1_0.tax_identifier=? and sj1_0.status=? fetch first ? rows only
+2025-12-31 16:11:17.238 DEBUG [http-nio-7072-exec-10] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier,bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sales sj1_0 left join sale_billing_history bh1_0 on sj1_0.sale_id=bh1_0.sale_id where sj1_0.sale_id=?
+2025-12-31 16:11:17.239 DEBUG [http-nio-7072-exec-10] org.hibernate.SQL - select bhj1_0.payment_id,bhj1_0.payment_date,bhj1_0.payment_method,bhj1_0.payment_status,bhj1_0.payment_value from sale_billing_history bhj1_0 where bhj1_0.payment_id=?
+2025-12-31 16:11:17.240 DEBUG [http-nio-7072-exec-10] org.hibernate.SQL - insert into sales (billing_day,canceled_at,created_at,discount,end_date,final_monthly_price,monthly_price,person_name,plan_id,plan_name,plan_type,start_date,status,tax_identifier,sale_id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-12-31 16:11:17.241 DEBUG [http-nio-7072-exec-10] org.hibernate.SQL - insert into sale_billing_history (payment_date,payment_method,payment_status,payment_value,payment_id) values (?,?,?,?,?)
+2025-12-31 16:11:17.242 DEBUG [http-nio-7072-exec-10] org.hibernate.SQL - update sale_billing_history set sale_id=? where payment_id=?
+2025-12-31 16:12:00.016 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:12:00.018 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:12:00.022 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:12:00.023 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:12:00.024 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:12:00.026 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:12:00.026 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:12:00.027 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:12:00.028 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 6 pending sales
+2025-12-31 16:12:00.028 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:12:00.028 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:12:00.028 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:12:00.028 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:12:00.028 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:12:00.028 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:12:00.028 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:13:00.003 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:13:00.004 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:13:00.009 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:13:00.011 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:13:00.012 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:13:00.013 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:13:00.014 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:13:00.015 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:13:00.015 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 6 pending sales
+2025-12-31 16:13:00.015 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:13:00.015 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:13:00.015 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:13:00.015 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:13:00.015 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:13:00.015 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:13:00.016 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:14:00.002 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:14:00.003 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:14:00.006 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:14:00.007 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:14:00.008 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:14:00.009 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:14:00.010 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:14:00.011 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:14:00.012 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 6 pending sales
+2025-12-31 16:14:00.012 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:14:00.012 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:14:00.012 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:14:00.012 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:14:00.012 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:14:00.012 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:14:00.012 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:14:22.202 INFO  [lifecycle-thread-3] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 stopped
+2025-12-31 16:14:24.288 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:14:24.290 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:14:24.293 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 16:14:28.362 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-12-31 16:14:28.401 INFO  [main] c.s.s.SalesServiceApplication - Starting SalesServiceApplication using Java 17.0.6 with PID 6592 (C:\workspace\new_backend\backend\sales-service\build\classes\java\main started by jeanc in C:\workspace\new_backend\backend\plan-service)
+2025-12-31 16:14:28.402 DEBUG [main] c.s.s.SalesServiceApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-12-31 16:14:28.403 INFO  [main] c.s.s.SalesServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-31 16:14:29.031 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:14:29.098 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interface.
+2025-12-31 16:14:29.257 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=37f01d4c-e819-3296-bc10-0e692b9b90b1
+2025-12-31 16:14:29.535 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 7072 (http)
+2025-12-31 16:14:29.543 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7072"]
+2025-12-31 16:14:29.545 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:14:29.545 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-31 16:14:29.601 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:14:29.601 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1161 ms
+2025-12-31 16:14:29.716 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:14:29.770 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-12-31 16:14:29.798 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:14:29.987 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:14:30.010 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:14:30.120 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@59f76e56
+2025-12-31 16:14:30.121 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:14:30.145 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-31 16:14:30.167 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@4ac19bc6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@2a075e70)
+2025-12-31 16:14:30.167 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@492c9892) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@533e2f4)
+2025-12-31 16:14:30.907 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:14:30.966 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:14:31.810 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:14:31.939 WARN  [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: acc0ea12-ec21-4413-86f7-829e8fc383d9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-31 16:14:32.102 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@10bf2185, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14c06f50, org.springframework.security.web.context.SecurityContextHolderFilter@4474c514, org.springframework.security.web.header.HeaderWriterFilter@f61b92d, org.springframework.web.filter.CorsFilter@6230a15a, org.springframework.security.web.authentication.logout.LogoutFilter@65b17373, com.salesflow.sales_service.infrastructure.security.ApiKeyAuthenticationFilter@7225f871, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fc44b4b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c8e4810, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bff4cb9, org.springframework.security.web.access.ExceptionTranslationFilter@9198fe3, org.springframework.security.web.access.intercept.AuthorizationFilter@808f65]
+2025-12-31 16:14:32.494 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7072"]
+2025-12-31 16:14:32.503 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 7072 (http) with context path ''
+2025-12-31 16:14:33.033 INFO  [lifecycle-thread-1] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 started
+2025-12-31 16:14:33.044 INFO  [main] c.s.s.SalesServiceApplication - Started SalesServiceApplication in 5.317 seconds (process running for 5.954)
+2025-12-31 16:15:00.022 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:15:00.148 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:15:00.175 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:15:00.180 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:15:00.181 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:15:00.183 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:15:00.184 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:15:00.186 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:15:00.189 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 6 pending sales
+2025-12-31 16:15:00.189 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:15:00.189 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:15:00.189 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:15:00.189 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:15:00.189 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:15:00.189 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:15:00.190 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:16:00.009 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:16:00.011 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:16:00.013 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:16:00.015 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:16:00.016 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:16:00.017 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:16:00.018 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:16:00.019 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:16:00.020 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 6 pending sales
+2025-12-31 16:16:00.020 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:16:00.020 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:16:00.020 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:16:00.020 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:16:00.020 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:16:00.021 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:16:00.021 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:17:00.009 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:17:00.011 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:17:00.015 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:17:00.017 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:17:00.018 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:17:00.019 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:17:00.020 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:17:00.021 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:17:00.022 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 6 pending sales
+2025-12-31 16:17:00.022 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:17:00.022 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:17:00.022 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:17:00.022 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:17:00.022 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:17:00.022 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:17:00.022 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:17:34.790 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-12-31 16:17:34.829 INFO  [main] c.s.s.SalesServiceApplication - Starting SalesServiceApplication using Java 17.0.6 with PID 10788 (C:\workspace\new_backend\backend\sales-service\build\classes\java\main started by jeanc in C:\workspace\new_backend\backend\plan-service)
+2025-12-31 16:17:34.829 DEBUG [main] c.s.s.SalesServiceApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-12-31 16:17:34.830 INFO  [main] c.s.s.SalesServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-31 16:17:35.496 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:17:35.547 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
+2025-12-31 16:17:35.706 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=37f01d4c-e819-3296-bc10-0e692b9b90b1
+2025-12-31 16:17:35.990 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 7072 (http)
+2025-12-31 16:17:36.000 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7072"]
+2025-12-31 16:17:36.001 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:17:36.001 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-31 16:17:36.057 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:17:36.057 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1187 ms
+2025-12-31 16:17:36.172 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:17:36.225 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-12-31 16:17:36.254 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:17:36.447 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:17:36.470 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:17:36.583 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@59f76e56
+2025-12-31 16:17:36.584 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:17:36.610 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-31 16:17:36.629 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@4ac19bc6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@2a075e70)
+2025-12-31 16:17:36.630 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@492c9892) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@533e2f4)
+2025-12-31 16:17:37.368 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:17:37.424 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:17:38.196 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:17:38.317 WARN  [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7e827003-2e6f-4134-8e63-fb41d4817175
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-31 16:17:38.477 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@10bf2185, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14c06f50, org.springframework.security.web.context.SecurityContextHolderFilter@4474c514, org.springframework.security.web.header.HeaderWriterFilter@f61b92d, org.springframework.web.filter.CorsFilter@6230a15a, org.springframework.security.web.authentication.logout.LogoutFilter@65b17373, com.salesflow.sales_service.infrastructure.security.ApiKeyAuthenticationFilter@7225f871, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fc44b4b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c8e4810, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bff4cb9, org.springframework.security.web.access.ExceptionTranslationFilter@9198fe3, org.springframework.security.web.access.intercept.AuthorizationFilter@808f65]
+2025-12-31 16:17:38.861 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7072"]
+2025-12-31 16:17:38.870 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 7072 (http) with context path ''
+2025-12-31 16:17:39.385 INFO  [lifecycle-thread-1] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 started
+2025-12-31 16:17:39.394 INFO  [main] c.s.s.SalesServiceApplication - Started SalesServiceApplication in 5.181 seconds (process running for 5.895)
+2025-12-31 16:17:51.470 INFO  [http-nio-7072-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 16:17:51.470 INFO  [http-nio-7072-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 16:17:51.471 INFO  [http-nio-7072-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 16:17:51.609 DEBUG [http-nio-7072-exec-2] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Checking active sale by taxIdentifier=11111111115
+2025-12-31 16:17:51.697 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - select sj1_0.sale_id from sales sj1_0 where sj1_0.tax_identifier=? and sj1_0.status=? fetch first ? rows only
+2025-12-31 16:17:51.703 DEBUG [http-nio-7072-exec-2] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Active sale exists=false | taxIdentifier=11111111115
+2025-12-31 16:17:51.704 DEBUG [http-nio-7072-exec-2] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Saving sale | saleId=309910e2 | status=PENDING
+2025-12-31 16:17:51.727 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier,bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sales sj1_0 left join sale_billing_history bh1_0 on sj1_0.sale_id=bh1_0.sale_id where sj1_0.sale_id=?
+2025-12-31 16:17:51.741 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - select bhj1_0.payment_id,bhj1_0.payment_date,bhj1_0.payment_method,bhj1_0.payment_status,bhj1_0.payment_value from sale_billing_history bhj1_0 where bhj1_0.payment_id=?
+2025-12-31 16:17:51.763 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - insert into sales (billing_day,canceled_at,created_at,discount,end_date,final_monthly_price,monthly_price,person_name,plan_id,plan_name,plan_type,start_date,status,tax_identifier,sale_id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-12-31 16:17:51.768 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - insert into sale_billing_history (payment_date,payment_method,payment_status,payment_value,payment_id) values (?,?,?,?,?)
+2025-12-31 16:17:51.772 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - update sale_billing_history set sale_id=? where payment_id=?
+2025-12-31 16:17:51.778 INFO  [http-nio-7072-exec-2] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Sale saved successfully | saleId=309910e2 | status=PENDING
+2025-12-31 16:18:00.018 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:18:00.019 DEBUG [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Searching pending sales
+2025-12-31 16:18:00.024 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:18:00.033 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:18:00.034 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:18:00.036 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:18:00.037 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:18:00.038 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:18:00.039 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:18:00.040 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:18:00.041 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=7
+2025-12-31 16:18:00.041 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 7 pending sales
+2025-12-31 16:18:00.041 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:18:00.042 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:18:00.042 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:18:00.042 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:18:00.042 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:18:00.042 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:18:00.042 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=309910e2
+2025-12-31 16:18:00.042 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:19:00.016 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:19:00.016 DEBUG [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Searching pending sales
+2025-12-31 16:19:00.017 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:19:00.020 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:19:00.022 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:19:00.023 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:19:00.024 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:19:00.025 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:19:00.026 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:19:00.027 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:19:00.028 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=7
+2025-12-31 16:19:00.028 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 7 pending sales
+2025-12-31 16:19:00.028 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:19:00.028 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:19:00.028 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:19:00.028 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:19:00.028 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:19:00.028 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:19:00.029 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=309910e2
+2025-12-31 16:19:00.029 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:20:00.013 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:20:00.014 DEBUG [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Searching pending sales
+2025-12-31 16:20:00.016 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:20:00.019 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:20:00.021 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:20:00.022 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:20:00.023 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:20:00.024 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:20:00.026 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:20:00.027 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:20:00.028 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=7
+2025-12-31 16:20:00.028 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 7 pending sales
+2025-12-31 16:20:00.029 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:20:00.029 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:20:00.029 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:20:00.029 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:20:00.029 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:20:00.029 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:20:00.029 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=309910e2
+2025-12-31 16:20:00.029 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:21:00.013 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:21:00.014 DEBUG [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Searching pending sales
+2025-12-31 16:21:00.015 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:21:00.018 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:21:00.020 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:21:00.021 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:21:00.022 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:21:00.023 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:21:00.024 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:21:00.025 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:21:00.026 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=7
+2025-12-31 16:21:00.026 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 7 pending sales
+2025-12-31 16:21:00.026 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:21:00.026 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:21:00.026 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:21:00.026 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:21:00.027 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:21:00.027 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:21:00.027 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=309910e2
+2025-12-31 16:21:00.027 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:22:00.010 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:22:00.011 DEBUG [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Searching pending sales
+2025-12-31 16:22:00.013 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:22:00.015 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:22:00.017 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:22:00.018 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:22:00.019 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:22:00.020 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:22:00.021 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:22:00.022 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:22:00.023 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=7
+2025-12-31 16:22:00.023 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 7 pending sales
+2025-12-31 16:22:00.023 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:22:00.023 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:22:00.023 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:22:00.023 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:22:00.023 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:22:00.023 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:22:00.023 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=309910e2
+2025-12-31 16:22:00.023 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:23:00.011 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:23:00.011 DEBUG [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Searching pending sales
+2025-12-31 16:23:00.013 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:23:00.015 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:23:00.017 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:23:00.019 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:23:00.020 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:23:00.020 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:23:00.021 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:23:00.022 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:23:00.023 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=7
+2025-12-31 16:23:00.023 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 7 pending sales
+2025-12-31 16:23:00.023 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:23:00.023 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:23:00.023 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:23:00.023 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:23:00.023 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:23:00.023 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:23:00.023 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=309910e2
+2025-12-31 16:23:00.023 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:23:39.639 INFO  [lifecycle-thread-3] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 stopped
+2025-12-31 16:23:41.739 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:23:41.741 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:23:41.743 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 16:23:46.199 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-12-31 16:23:46.240 INFO  [main] c.s.s.SalesServiceApplication - Starting SalesServiceApplication using Java 17.0.6 with PID 9060 (C:\workspace\new_backend\backend\sales-service\build\classes\java\main started by jeanc in C:\workspace\new_backend\backend\plan-service)
+2025-12-31 16:23:46.240 DEBUG [main] c.s.s.SalesServiceApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-12-31 16:23:46.241 INFO  [main] c.s.s.SalesServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-31 16:23:46.829 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:23:46.879 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interface.
+2025-12-31 16:23:47.041 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=37f01d4c-e819-3296-bc10-0e692b9b90b1
+2025-12-31 16:23:47.331 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 7072 (http)
+2025-12-31 16:23:47.339 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7072"]
+2025-12-31 16:23:47.341 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:23:47.341 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-31 16:23:47.400 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:23:47.400 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1119 ms
+2025-12-31 16:23:47.522 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:23:47.577 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-12-31 16:23:47.608 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:23:47.820 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:23:47.844 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:23:47.955 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@59f76e56
+2025-12-31 16:23:47.957 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:23:47.982 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-31 16:23:48.004 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@4ac19bc6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@2a075e70)
+2025-12-31 16:23:48.004 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@492c9892) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@533e2f4)
+2025-12-31 16:23:48.781 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:23:48.849 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:23:49.731 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:23:49.869 WARN  [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: d5c334b8-ac9a-4158-95a7-d4c318eba22a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-31 16:23:50.042 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@10bf2185, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14c06f50, org.springframework.security.web.context.SecurityContextHolderFilter@4474c514, org.springframework.security.web.header.HeaderWriterFilter@f61b92d, org.springframework.web.filter.CorsFilter@6230a15a, org.springframework.security.web.authentication.logout.LogoutFilter@65b17373, com.salesflow.sales_service.infrastructure.security.ApiKeyAuthenticationFilter@7225f871, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fc44b4b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c8e4810, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bff4cb9, org.springframework.security.web.access.ExceptionTranslationFilter@9198fe3, org.springframework.security.web.access.intercept.AuthorizationFilter@808f65]
+2025-12-31 16:23:50.420 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7072"]
+2025-12-31 16:23:50.429 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 7072 (http) with context path ''
+2025-12-31 16:23:50.930 INFO  [lifecycle-thread-1] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 started
+2025-12-31 16:23:50.938 INFO  [main] c.s.s.SalesServiceApplication - Started SalesServiceApplication in 5.393 seconds (process running for 6.057)
+2025-12-31 16:24:00.019 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:24:00.019 DEBUG [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Searching pending sales
+2025-12-31 16:24:00.116 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:24:00.140 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:24:00.144 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:24:00.146 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:24:00.148 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:24:00.149 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:24:00.151 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:24:00.154 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:24:00.155 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=7
+2025-12-31 16:24:00.155 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 7 pending sales
+2025-12-31 16:24:00.155 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:24:00.155 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:24:00.155 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:24:00.156 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:24:00.156 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:24:00.156 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:24:00.156 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=309910e2
+2025-12-31 16:24:00.156 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:24:23.213 INFO  [http-nio-7072-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 16:24:23.213 INFO  [http-nio-7072-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 16:24:23.214 INFO  [http-nio-7072-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 16:24:23.312 INFO  [http-nio-7072-exec-2] c.s.s.i.controller.SaleController - [CONTROLLER][SALE] Create sale request received | taxIdentifier=11111111115
+2025-12-31 16:24:23.312 INFO  [http-nio-7072-exec-2] c.s.s.a.service.PlanService - [SERVICE][SALE] Starting sale creation | taxIdentifier=11111111115 | planId=PL000003
+2025-12-31 16:24:23.312 DEBUG [http-nio-7072-exec-2] c.s.s.a.service.PlanService - [SERVICE][SALE] Validating person | taxIdentifier=11111111115
+2025-12-31 16:24:23.312 INFO  [http-nio-7072-exec-2] c.s.s.i.g.adapter.PersonAdapter - [GATEWAY][PERSON] Fetching person | personId=11111111115
+2025-12-31 16:24:23.347 INFO  [http-nio-7072-exec-2] c.s.s.i.g.adapter.PersonAdapter - [GATEWAY][PERSON] Person found | personId=11111111115 | status=ACTIVE
+2025-12-31 16:24:23.347 DEBUG [http-nio-7072-exec-2] c.s.s.a.service.PlanService - [SERVICE][SALE] Validating plan | planId=PL000003
+2025-12-31 16:24:23.348 INFO  [http-nio-7072-exec-2] c.s.s.i.gateway.adapter.PlanAdapter - [GATEWAY][PLAN] Fetching plan | planId=PL000003
+2025-12-31 16:24:23.359 INFO  [http-nio-7072-exec-2] c.s.s.i.gateway.adapter.PlanAdapter - [GATEWAY][PLAN] Plan found | planId=PL000003 | active=true
+2025-12-31 16:24:23.359 DEBUG [http-nio-7072-exec-2] c.s.s.a.service.PlanService - [SERVICE][SALE] Checking active sale | taxIdentifier=11111111115
+2025-12-31 16:24:23.359 DEBUG [http-nio-7072-exec-2] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Checking active sale by taxIdentifier=11111111115
+2025-12-31 16:24:23.363 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - select sj1_0.sale_id from sales sj1_0 where sj1_0.tax_identifier=? and sj1_0.status=? fetch first ? rows only
+2025-12-31 16:24:23.366 DEBUG [http-nio-7072-exec-2] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Active sale exists=false | taxIdentifier=11111111115
+2025-12-31 16:24:23.366 DEBUG [http-nio-7072-exec-2] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Saving sale | saleId=6fd00c19 | status=PENDING
+2025-12-31 16:24:23.381 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier,bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sales sj1_0 left join sale_billing_history bh1_0 on sj1_0.sale_id=bh1_0.sale_id where sj1_0.sale_id=?
+2025-12-31 16:24:23.387 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - select bhj1_0.payment_id,bhj1_0.payment_date,bhj1_0.payment_method,bhj1_0.payment_status,bhj1_0.payment_value from sale_billing_history bhj1_0 where bhj1_0.payment_id=?
+2025-12-31 16:24:23.401 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - insert into sales (billing_day,canceled_at,created_at,discount,end_date,final_monthly_price,monthly_price,person_name,plan_id,plan_name,plan_type,start_date,status,tax_identifier,sale_id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-12-31 16:24:23.405 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - insert into sale_billing_history (payment_date,payment_method,payment_status,payment_value,payment_id) values (?,?,?,?,?)
+2025-12-31 16:24:23.411 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - update sale_billing_history set sale_id=? where payment_id=?
+2025-12-31 16:24:23.416 INFO  [http-nio-7072-exec-2] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Sale saved successfully | saleId=6fd00c19 | status=PENDING
+2025-12-31 16:24:23.417 INFO  [http-nio-7072-exec-2] c.s.s.a.service.PlanService - [SERVICE][SALE] Sale created successfully | saleId=6fd00c19 | taxIdentifier=11111111115
+2025-12-31 16:24:23.417 INFO  [http-nio-7072-exec-2] c.s.s.i.controller.SaleController - [CONTROLLER][SALE] Sale created successfully | taxIdentifier=11111111115
+2025-12-31 16:25:00.001 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:25:00.001 DEBUG [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Searching pending sales
+2025-12-31 16:25:00.003 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:25:00.006 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:25:00.008 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:25:00.009 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:25:00.010 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:25:00.011 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:25:00.011 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:25:00.012 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:25:00.013 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:25:00.014 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=8
+2025-12-31 16:25:00.014 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 8 pending sales
+2025-12-31 16:25:00.014 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:25:00.015 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:25:00.015 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:25:00.015 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:25:00.015 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:25:00.015 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:25:00.015 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=309910e2
+2025-12-31 16:25:00.015 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6fd00c19
+2025-12-31 16:25:00.015 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:26:00.012 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:26:00.013 DEBUG [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Searching pending sales
+2025-12-31 16:26:00.014 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:26:00.017 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:26:00.019 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:26:00.020 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:26:00.021 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:26:00.022 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:26:00.023 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:26:00.024 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:26:00.025 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:26:00.026 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=8
+2025-12-31 16:26:00.026 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 8 pending sales
+2025-12-31 16:26:00.026 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:26:00.026 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:26:00.026 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:26:00.026 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:26:00.026 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:26:00.026 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:26:00.026 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=309910e2
+2025-12-31 16:26:00.026 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6fd00c19
+2025-12-31 16:26:00.026 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:26:11.041 INFO  [lifecycle-thread-3] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 stopped
+2025-12-31 16:26:13.136 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:26:13.137 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:26:13.139 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 16:26:16.112 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-12-31 16:26:16.152 INFO  [main] c.s.s.SalesServiceApplication - Starting SalesServiceApplication using Java 17.0.6 with PID 21608 (C:\workspace\new_backend\backend\sales-service\build\classes\java\main started by jeanc in C:\workspace\new_backend\backend\plan-service)
+2025-12-31 16:26:16.153 DEBUG [main] c.s.s.SalesServiceApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-12-31 16:26:16.153 INFO  [main] c.s.s.SalesServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-31 16:26:16.733 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:26:16.781 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interface.
+2025-12-31 16:26:16.927 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=37f01d4c-e819-3296-bc10-0e692b9b90b1
+2025-12-31 16:26:17.214 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 7072 (http)
+2025-12-31 16:26:17.223 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7072"]
+2025-12-31 16:26:17.224 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:26:17.224 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-31 16:26:17.284 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:26:17.284 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1094 ms
+2025-12-31 16:26:17.402 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:26:17.458 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-12-31 16:26:17.488 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:26:17.682 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:26:17.705 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:26:17.816 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7b8b07ae
+2025-12-31 16:26:17.818 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:26:17.841 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-31 16:26:17.861 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@533e2f4) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@436a563f)
+2025-12-31 16:26:17.861 DEBUG [main] o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@538e74fc) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7ecb9e17)
+2025-12-31 16:26:18.615 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:26:18.671 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:26:19.428 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:26:19.547 WARN  [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 2192c9ee-9b6a-447b-a22b-f65a583c02c0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-31 16:26:19.702 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7225f871, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1bff4cb9, org.springframework.security.web.context.SecurityContextHolderFilter@1c8e4810, org.springframework.security.web.header.HeaderWriterFilter@4474c514, org.springframework.web.filter.CorsFilter@c521a79, org.springframework.security.web.authentication.logout.LogoutFilter@7e0fc5d0, com.salesflow.sales_service.infrastructure.security.ApiKeyAuthenticationFilter@6b0f50d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4dfe14d4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@309d9033, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36b4cbb8, org.springframework.security.web.access.ExceptionTranslationFilter@22277482, org.springframework.security.web.access.intercept.AuthorizationFilter@10bf2185]
+2025-12-31 16:26:20.084 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7072"]
+2025-12-31 16:26:20.093 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 7072 (http) with context path ''
+2025-12-31 16:26:20.603 INFO  [lifecycle-thread-1] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 started
+2025-12-31 16:26:20.619 INFO  [main] c.s.s.SalesServiceApplication - Started SalesServiceApplication in 5.087 seconds (process running for 5.578)
+2025-12-31 16:26:37.765 INFO  [http-nio-7072-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 16:26:37.765 INFO  [http-nio-7072-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 16:26:37.766 INFO  [http-nio-7072-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-12-31 16:26:37.861 INFO  [http-nio-7072-exec-2] c.s.s.i.controller.SaleController - [CONTROLLER][SALE] Create sale request received | taxIdentifier=11111111115
+2025-12-31 16:26:37.861 INFO  [http-nio-7072-exec-2] c.s.s.a.service.PlanService - [SERVICE][SALE] Starting sale creation | taxIdentifier=11111111115 | planId=PL000003
+2025-12-31 16:26:37.862 DEBUG [http-nio-7072-exec-2] c.s.s.a.service.PlanService - [SERVICE][SALE] Validating person | taxIdentifier=11111111115
+2025-12-31 16:26:37.862 INFO  [http-nio-7072-exec-2] c.s.s.i.g.adapter.PersonAdapter - [GATEWAY][PERSON] Fetching person | personId=11111111115
+2025-12-31 16:26:37.890 INFO  [http-nio-7072-exec-2] c.s.s.i.g.adapter.PersonAdapter - [GATEWAY][PERSON] Person found | personId=11111111115 | status=ACTIVE
+2025-12-31 16:26:37.891 DEBUG [http-nio-7072-exec-2] c.s.s.a.service.PlanService - [SERVICE][SALE] Validating plan | planId=PL000003
+2025-12-31 16:26:37.891 INFO  [http-nio-7072-exec-2] c.s.s.i.gateway.adapter.PlanAdapter - [GATEWAY][PLAN] Fetching plan | planId=PL000003
+2025-12-31 16:26:37.901 INFO  [http-nio-7072-exec-2] c.s.s.i.gateway.adapter.PlanAdapter - [GATEWAY][PLAN] Plan found | planId=PL000003 | active=true
+2025-12-31 16:26:37.901 DEBUG [http-nio-7072-exec-2] c.s.s.a.service.PlanService - [SERVICE][SALE] Checking active sale | taxIdentifier=11111111115
+2025-12-31 16:26:37.901 DEBUG [http-nio-7072-exec-2] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Checking active sale by taxIdentifier=11111111115
+2025-12-31 16:26:37.988 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - select sj1_0.sale_id from sales sj1_0 where sj1_0.tax_identifier=? and sj1_0.status=? fetch first ? rows only
+2025-12-31 16:26:37.995 DEBUG [http-nio-7072-exec-2] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Active sale exists=false | taxIdentifier=11111111115
+2025-12-31 16:26:37.995 DEBUG [http-nio-7072-exec-2] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Saving sale | saleId=4ce082d8 | status=PENDING
+2025-12-31 16:26:38.020 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier,bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sales sj1_0 left join sale_billing_history bh1_0 on sj1_0.sale_id=bh1_0.sale_id where sj1_0.sale_id=?
+2025-12-31 16:26:38.035 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - select bhj1_0.payment_id,bhj1_0.payment_date,bhj1_0.payment_method,bhj1_0.payment_status,bhj1_0.payment_value from sale_billing_history bhj1_0 where bhj1_0.payment_id=?
+2025-12-31 16:26:38.056 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - insert into sales (billing_day,canceled_at,created_at,discount,end_date,final_monthly_price,monthly_price,person_name,plan_id,plan_name,plan_type,start_date,status,tax_identifier,sale_id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-12-31 16:26:38.061 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - insert into sale_billing_history (payment_date,payment_method,payment_status,payment_value,payment_id) values (?,?,?,?,?)
+2025-12-31 16:26:38.066 DEBUG [http-nio-7072-exec-2] org.hibernate.SQL - update sale_billing_history set sale_id=? where payment_id=?
+2025-12-31 16:26:38.072 INFO  [http-nio-7072-exec-2] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Sale saved successfully | saleId=4ce082d8 | status=PENDING
+2025-12-31 16:26:38.073 INFO  [http-nio-7072-exec-2] c.s.s.a.service.PlanService - [SERVICE][SALE] Sale created successfully | saleId=4ce082d8 | taxIdentifier=11111111115
+2025-12-31 16:26:38.073 INFO  [http-nio-7072-exec-2] c.s.s.i.controller.SaleController - [CONTROLLER][SALE] Sale created successfully | taxIdentifier=11111111115
+2025-12-31 16:27:00.019 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:27:00.019 DEBUG [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Searching pending sales
+2025-12-31 16:27:00.025 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:27:00.034 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:27:00.038 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:27:00.039 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:27:00.040 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:27:00.041 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:27:00.043 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:27:00.045 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:27:00.046 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:27:00.047 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:27:00.048 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=9
+2025-12-31 16:27:00.048 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 9 pending sales
+2025-12-31 16:27:00.048 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:27:00.048 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:27:00.048 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:27:00.048 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:27:00.048 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:27:00.048 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:27:00.048 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=309910e2
+2025-12-31 16:27:00.048 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6fd00c19
+2025-12-31 16:27:00.049 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=4ce082d8
+2025-12-31 16:27:00.049 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:28:00.013 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Starting pending sales processing
+2025-12-31 16:28:00.014 DEBUG [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Searching pending sales
+2025-12-31 16:28:00.015 DEBUG [scheduling-1] org.hibernate.SQL - select sj1_0.sale_id,sj1_0.billing_day,sj1_0.canceled_at,sj1_0.created_at,sj1_0.discount,sj1_0.end_date,sj1_0.final_monthly_price,sj1_0.monthly_price,sj1_0.person_name,sj1_0.plan_id,sj1_0.plan_name,sj1_0.plan_type,sj1_0.start_date,sj1_0.status,sj1_0.tax_identifier from sales sj1_0 where sj1_0.status=?
+2025-12-31 16:28:00.019 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:28:00.021 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:28:00.022 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:28:00.023 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:28:00.024 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:28:00.027 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:28:00.028 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:28:00.029 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:28:00.031 DEBUG [scheduling-1] org.hibernate.SQL - select bh1_0.sale_id,bh1_0.payment_id,bh1_0.payment_date,bh1_0.payment_method,bh1_0.payment_status,bh1_0.payment_value from sale_billing_history bh1_0 where bh1_0.sale_id=?
+2025-12-31 16:28:00.032 INFO  [scheduling-1] c.s.s.i.p.a.SaleRepositoryAdapter - [REPOSITORY][SALE] Pending sales found | total=9
+2025-12-31 16:28:00.032 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Found 9 pending sales
+2025-12-31 16:28:00.032 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=b600b8fe
+2025-12-31 16:28:00.032 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=e9877add
+2025-12-31 16:28:00.032 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=41590569
+2025-12-31 16:28:00.032 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=1004f586
+2025-12-31 16:28:00.032 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6df74b3c
+2025-12-31 16:28:00.032 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=a97eafb8
+2025-12-31 16:28:00.032 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=309910e2
+2025-12-31 16:28:00.032 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=6fd00c19
+2025-12-31 16:28:00.032 DEBUG [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Checking saleId=4ce082d8
+2025-12-31 16:28:00.032 INFO  [scheduling-1] c.s.s.a.s.PendingSalesScheduler - [JOB][PENDING_SALES] Processing finished
+2025-12-31 16:28:20.724 INFO  [lifecycle-thread-3] i.a.c.s.l.AbstractMessageListenerContainer - Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 stopped
+2025-12-31 16:28:22.829 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:28:22.831 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:28:22.834 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -38,10 +38,6 @@ public class Sale {
 
     private final List<BillingHistory> billingHistory;
 
-    /* ======================
-       Factory: criação
-       ====================== */
-
     public static Sale create(
             String saleId,
             String taxIdentifier,
@@ -76,10 +72,6 @@ public class Sale {
                 billingHistory != null ? billingHistory : List.of()
         );
     }
-
-    /* ======================
-       Factory: restore
-       ====================== */
 
     public static Sale restore(
             String saleId,
@@ -119,10 +111,6 @@ public class Sale {
         );
     }
 
-    /* ======================
-       Regras de negócio
-       ====================== */
-
     public void cancel(LocalDateTime canceledAt) {
         if (this.status != StatusEnum.ACTIVE) {
             throw new IllegalStateException("Somente vendas ativas podem ser canceladas");
@@ -132,10 +120,6 @@ public class Sale {
         this.canceledAt = canceledAt;
         this.endDate = canceledAt;
     }
-
-    /* ======================
-       Helpers
-       ====================== */
 
     private static void validateInputs(BigDecimal monthlyPrice, Integer billingDay) {
         if (monthlyPrice == null || monthlyPrice.signum() <= 0) {

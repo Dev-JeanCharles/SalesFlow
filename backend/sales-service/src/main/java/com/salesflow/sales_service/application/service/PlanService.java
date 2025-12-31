@@ -12,6 +12,8 @@ import com.salesflow.sales_service.domain.model.Sale;
 import com.salesflow.sales_service.domain.port.in.SaleRepositoryPort;
 import com.salesflow.sales_service.infrastructure.gateway.dto.PersonDto;
 import com.salesflow.sales_service.infrastructure.gateway.dto.PlanDto;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -22,9 +24,10 @@ import java.util.UUID;
 @Service
 public class PlanService implements CreateSalesUseCase {
 
+    private static final Logger log = LoggerFactory.getLogger(PlanService.class);
+
     private final PersonPort personPort;
     private final PlanPort planPort;
-
     private final SaleRepositoryPort repositoryPort;
 
     public PlanService(
@@ -40,6 +43,12 @@ public class PlanService implements CreateSalesUseCase {
     @Override
     public void createSale(SaleRequestDto request) {
 
+        log.info(
+                "[SERVICE][SALE] Starting sale creation | taxIdentifier={} | planId={}",
+                request.getTaxIdentifier(),
+                request.getPlanId()
+        );
+
         var person = validatePerson(request.getTaxIdentifier());
         var plan = validatePlan(request.getPlanId());
         validateNoActiveSale(person.taxIdentifier());
@@ -53,7 +62,6 @@ public class PlanService implements CreateSalesUseCase {
                         request.getBilling().getPaymentMethod()
                 )
         );
-
 
         Sale sale = Sale.create(
                 UUID.randomUUID().toString().substring(0, 8),
@@ -71,23 +79,37 @@ public class PlanService implements CreateSalesUseCase {
 
         repositoryPort.save(sale);
 
-
-
-        System.out.println("Person: " + person);
-        System.out.println("Plan: " + plan.name());
+        log.info(
+                "[SERVICE][SALE] Sale created successfully | saleId={} | taxIdentifier={}",
+                sale.getSaleId(),
+                sale.getTaxIdentifier()
+        );
     }
 
     private PersonDto validatePerson(String taxIdentifier) {
 
-        PersonDto person = personPort.getPersonById(taxIdentifier)
-                .orElseThrow(() ->
-                        new ProposalNotAllowedException(
-                                "Não é possível oferecer proposta: cliente não existe"
-                        )
-                );
+        log.debug(
+                "[SERVICE][SALE] Validating person | taxIdentifier={}",
+                taxIdentifier
+        );
 
+        PersonDto person = personPort.getPersonById(taxIdentifier)
+                .orElseThrow(() -> {
+                    log.warn(
+                            "[SERVICE][SALE] Person not found | taxIdentifier={}",
+                            taxIdentifier
+                    );
+                    return new ProposalNotAllowedException(
+                            "Não é possível oferecer proposta: cliente não existe"
+                    );
+                });
 
         if (!Objects.equals(person.status(), PersonStatus.ACTIVE.name())) {
+            log.warn(
+                    "[SERVICE][SALE] Person inactive | taxIdentifier={} | status={}",
+                    taxIdentifier,
+                    person.status()
+            );
             throw new ProposalNotAllowedException(
                     "Não é possível oferecer proposta: cliente com status " + person.status()
             );
@@ -98,14 +120,27 @@ public class PlanService implements CreateSalesUseCase {
 
     private PlanDto validatePlan(String planId) {
 
+        log.debug(
+                "[SERVICE][SALE] Validating plan | planId={}",
+                planId
+        );
+
         PlanDto plan = planPort.getPlanById(planId)
-                .orElseThrow(() ->
-                        new ProposalNotAllowedException(
-                                "Não é possível oferecer proposta: plano não existe"
-                        )
-                );
+                .orElseThrow(() -> {
+                    log.warn(
+                            "[SERVICE][SALE] Plan not found | planId={}",
+                            planId
+                    );
+                    return new ProposalNotAllowedException(
+                            "Não é possível oferecer proposta: plano não existe"
+                    );
+                });
 
         if (!plan.active()) {
+            log.warn(
+                    "[SERVICE][SALE] Plan inactive | planId={}",
+                    planId
+            );
             throw new ProposalNotAllowedException(
                     "Não é possível oferecer proposta: plano com status inativo"
             );
@@ -116,7 +151,16 @@ public class PlanService implements CreateSalesUseCase {
 
     private void validateNoActiveSale(String taxIdentifier) {
 
+        log.debug(
+                "[SERVICE][SALE] Checking active sale | taxIdentifier={}",
+                taxIdentifier
+        );
+
         if (repositoryPort.existsActiveSaleByTaxIdentifier(taxIdentifier)) {
+            log.warn(
+                    "[SERVICE][SALE] Active sale already exists | taxIdentifier={}",
+                    taxIdentifier
+            );
             throw new ProposalNotAllowedException(
                     "Não é possível oferecer proposta: cliente já possui um plano ativo"
             );
