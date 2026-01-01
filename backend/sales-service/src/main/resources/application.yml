@@ -1,0 +1,59 @@
+spring:
+  application:
+    name: sales-service
+
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+  datasource:
+    url: ${DATA_URL}
+    username: ${DATA_USERNAME}
+    password: ${DATA_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+
+  cloud:
+    aws:
+      region:
+        static: us-east-1
+      credentials:
+        access-key: test
+        secret-key: test
+      sqs:
+        endpoint: http://localhost:4566
+
+server:
+  port: 7072
+
+security:
+  secret: ${SECRET}
+
+# ======================
+# ACTUATOR / METRICS
+# ======================
+management:
+  server:
+    port: 8081   # Porta separada para métricas (boa prática)
+
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+    health:
+      show-details: always
+    prometheus:
+      enabled: true
+
+  metrics:
+    tags:
+      application: ${spring.application.name}
+    export:
+      prometheus:
+        enabled: true

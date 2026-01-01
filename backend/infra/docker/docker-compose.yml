@@ -28,5 +28,13 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "./localstack/init:/etc/localstack/init/ready.d"
 
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: salesflow-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ../prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+
 volumes:
   person-db-data:

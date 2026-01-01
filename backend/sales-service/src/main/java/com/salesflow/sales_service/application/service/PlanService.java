@@ -12,6 +12,8 @@ import com.salesflow.sales_service.domain.model.Sale;
 import com.salesflow.sales_service.domain.port.in.SaleRepositoryPort;
 import com.salesflow.sales_service.infrastructure.gateway.dto.PersonDto;
 import com.salesflow.sales_service.infrastructure.gateway.dto.PlanDto;
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.MeterRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -24,20 +26,24 @@ import java.util.UUID;
 @Service
 public class PlanService implements CreateSalesUseCase {
 
+    private final Counter salesCreatedCounter;
     private static final Logger log = LoggerFactory.getLogger(PlanService.class);
 
     private final PersonPort personPort;
     private final PlanPort planPort;
     private final SaleRepositoryPort repositoryPort;
 
+
     public PlanService(
             PersonPort personPort,
             PlanPort planPort,
-            SaleRepositoryPort repositoryPort
+            SaleRepositoryPort repositoryPort,
+            MeterRegistry meterRegistry
     ) {
         this.personPort = personPort;
         this.planPort = planPort;
         this.repositoryPort = repositoryPort;
+        this.salesCreatedCounter = meterRegistry.counter("sales.created.total");
     }
 
     @Override
@@ -78,6 +84,8 @@ public class PlanService implements CreateSalesUseCase {
         );
 
         repositoryPort.save(sale);
+
+        salesCreatedCounter.increment();
 
         log.info(
                 "[SERVICE][SALE] Sale created successfully | saleId={} | taxIdentifier={}",

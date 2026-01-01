@@ -51,6 +51,11 @@ dependencies {
 	//SQS
 	implementation "io.awspring.cloud:spring-cloud-aws-starter-sqs"
 
+	// ACTUATOR
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+	// PROMETHEUS
+	implementation 'io.micrometer:micrometer-registry-prometheus'
 
 	// TESTS
 	testImplementation 'com.h2database:h2'
