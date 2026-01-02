@@ -4,6 +4,8 @@ import com.salesflow.sales_service.application.port.out.SqsProducerPort;
 import com.salesflow.sales_service.domain.enums.StatusPaymentEnum;
 import com.salesflow.sales_service.domain.model.Sale;
 import com.salesflow.sales_service.domain.port.in.SaleRepositoryPort;
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.MeterRegistry;
 import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,15 +21,19 @@ public class PendingSalesScheduler {
             LoggerFactory.getLogger(PendingSalesScheduler.class);
     private final SaleRepositoryPort saleRepository;
     private final SqsProducerPort sqsProducer;
-
+    private final Counter salesActivatedCounter;
     public PendingSalesScheduler(
             SaleRepositoryPort saleRepository,
-            SqsProducerPort sqsProducer
+            SqsProducerPort sqsProducer,
+            MeterRegistry meterRegistry
     ) {
         this.saleRepository = saleRepository;
         this.sqsProducer = sqsProducer;
+        this.salesActivatedCounter = Counter.builder("sales_contracts_activated_total")
+                .description("Total of sales contracts activated and sent to SQS")
+                .tag("application", "sales-service")
+                .register(meterRegistry);
     }
-
     @Scheduled(cron = "0 * * * * *")
     @Transactional
     public void processPendingSales() {
@@ -50,6 +56,8 @@ public class PendingSalesScheduler {
 
                 if (firstPaymentIsPaid(sale)) {
                     sqsProducer.sendSaleActivatedMessage(sale.getSaleId());
+
+                    salesActivatedCounter.increment();
 
                     log.info(
                             "[JOB][PENDING_SALES] Activation message sent | saleId={}",
