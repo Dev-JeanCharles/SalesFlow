@@ -36,4 +36,12 @@ public class ApiKeyAuthenticationFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        String uri = request.getRequestURI();
+
+        return uri.startsWith("/actuator")
+                || uri.startsWith("/v3/api-docs")
+                || uri.startsWith("/swagger-ui");
+    }
 }
