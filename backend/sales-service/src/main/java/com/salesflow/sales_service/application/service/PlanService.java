@@ -6,7 +6,6 @@ import com.salesflow.sales_service.application.port.in.CreateSalesUseCase;
 import com.salesflow.sales_service.application.port.out.PersonPort;
 import com.salesflow.sales_service.application.port.out.PlanPort;
 import com.salesflow.sales_service.domain.enums.PersonStatus;
-import com.salesflow.sales_service.domain.enums.StatusPaymentEnum;
 import com.salesflow.sales_service.domain.model.BillingHistory;
 import com.salesflow.sales_service.domain.model.Sale;
 import com.salesflow.sales_service.domain.port.in.SaleRepositoryPort;
@@ -59,15 +58,15 @@ public class PlanService implements CreateSalesUseCase {
         var plan = validatePlan(request.getPlanId());
         validateNoActiveSale(person.taxIdentifier());
 
-        List<BillingHistory> billingHistory = List.of(
-                new BillingHistory(
-                        UUID.randomUUID().toString(),
+        LocalDateTime startDate = LocalDateTime.now();
+
+        List<BillingHistory> billingHistory =
+                BillingScheduleService.generate(
                         plan.monthlyPrice(),
-                        StatusPaymentEnum.PENDING,
-                        request.getBilling().getNextBillingDate(),
+                        startDate,
+                        request.getBillingDay(),
                         request.getBilling().getPaymentMethod()
-                )
-        );
+                );
 
         Sale sale = Sale.create(
                 UUID.randomUUID().toString().substring(0, 8),

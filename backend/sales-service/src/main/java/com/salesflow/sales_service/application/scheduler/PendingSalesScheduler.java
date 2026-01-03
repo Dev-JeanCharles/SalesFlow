@@ -78,8 +78,10 @@ public class PendingSalesScheduler {
 
     private boolean firstPaymentIsPaid(Sale sale) {
         return sale.getBillingHistory().stream()
+                .filter(b -> b.getInstallmentNumber() == 1)
                 .findFirst()
                 .map(b -> b.getPaymentStatus() == StatusPaymentEnum.PAID)
                 .orElse(false);
     }
+
 }

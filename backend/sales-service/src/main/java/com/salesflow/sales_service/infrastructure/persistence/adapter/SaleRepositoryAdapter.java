@@ -1,5 +1,6 @@
 package com.salesflow.sales_service.infrastructure.persistence.adapter;
 
+import com.salesflow.sales_service.domain.enums.StatusPaymentEnum;
 import com.salesflow.sales_service.domain.model.BillingHistory;
 import com.salesflow.sales_service.domain.model.Sale;
 import com.salesflow.sales_service.domain.port.in.SaleRepositoryPort;
@@ -170,20 +171,29 @@ public class SaleRepositoryAdapter implements SaleRepositoryPort {
     private BillingHistoryJpa toJpa(BillingHistory billing) {
         return new BillingHistoryJpa(
                 billing.getPaymentId(),
+                billing.getInstallmentNumber(),
                 billing.getPaymentValue(),
                 billing.getPaymentStatus(),
-                billing.getPaymentDate(),
+                billing.getDueDate(),
+                billing.getPaidAt(),
                 billing.getPaymentMethod()
         );
     }
 
     private BillingHistory toDomain(BillingHistoryJpa jpa) {
-        return new BillingHistory(
+
+        BillingHistory billing = new BillingHistory(
                 jpa.getPaymentId(),
+                jpa.getInstallmentNumber(),
                 jpa.getPaymentValue(),
-                jpa.getPaymentStatus(),
-                jpa.getPaymentDate(),
+                jpa.getDueDate(),
                 jpa.getPaymentMethod()
         );
+
+        if (jpa.getPaymentStatus() == StatusPaymentEnum.PAID) {
+            billing.markAsPaid(jpa.getPaidAt());
+        }
+
+        return billing;
     }
 }

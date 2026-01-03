@@ -17,6 +17,9 @@ public class BillingHistoryJpa {
     @Id
     private String paymentId;
 
+    @Column(nullable = false)
+    private Integer installmentNumber;
+
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal paymentValue;
 
@@ -25,22 +28,29 @@ public class BillingHistoryJpa {
     private StatusPaymentEnum paymentStatus;
 
     @Column(nullable = false)
-    private LocalDateTime paymentDate;
+    private LocalDateTime dueDate;
 
-    @Column(nullable = true)
+    @Column
+    private LocalDateTime paidAt;
+
+    @Column
     private String paymentMethod;
 
     public BillingHistoryJpa(
             String paymentId,
+            Integer installmentNumber,
             BigDecimal paymentValue,
             StatusPaymentEnum paymentStatus,
-            LocalDateTime paymentDate,
+            LocalDateTime dueDate,
+            LocalDateTime paidAt,
             String paymentMethod
     ) {
         this.paymentId = paymentId;
+        this.installmentNumber = installmentNumber;
         this.paymentValue = paymentValue;
         this.paymentStatus = paymentStatus;
-        this.paymentDate = paymentDate;
+        this.dueDate = dueDate;
+        this.paidAt = paidAt;
         this.paymentMethod = paymentMethod;
     }
 }

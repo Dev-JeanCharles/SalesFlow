@@ -64,7 +64,7 @@ public class Sale {
                 discount != null ? discount : BigDecimal.ZERO,
                 calculateFinalPrice(monthlyPrice, discount),
                 startDate,
-                null,
+                startDate.plusMonths(12),
                 billingDay,
                 StatusEnum.PENDING,
                 LocalDateTime.now(),

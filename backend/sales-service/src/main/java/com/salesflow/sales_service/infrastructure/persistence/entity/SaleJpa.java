@@ -33,7 +33,7 @@ public class SaleJpa {
     private String planName;
 
     @Column(nullable = false)
-    private String planType; // snapshot (pré, controle, pós)
+    private String planType;
 
     @Column(nullable = false)
     private LocalDateTime startDate;
