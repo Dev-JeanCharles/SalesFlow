@@ -64,6 +64,10 @@ dependencies {
 	testImplementation 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.slf4j:jul-to-slf4j'
+
+	// Mockito (opcional, mas recomendado)
+	testImplementation 'org.mockito:mockito-core'
+
 }
 
 tasks.named('test') {

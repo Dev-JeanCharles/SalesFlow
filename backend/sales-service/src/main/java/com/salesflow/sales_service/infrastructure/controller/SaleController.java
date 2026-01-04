@@ -2,6 +2,7 @@ package com.salesflow.sales_service.infrastructure.controller;
 
 import com.salesflow.sales_service.application.dto.SaleRequestDto;
 import com.salesflow.sales_service.application.port.in.CreateSalesUseCase;
+import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -21,7 +22,9 @@ public class SaleController {
     }
 
     @PostMapping
-    public ResponseEntity<String> createSale(@RequestBody SaleRequestDto saleRequestDto) {
+    public ResponseEntity<String> createSale(
+            @Valid @RequestBody SaleRequestDto saleRequestDto
+    ) {
 
         log.info(
                 "[CONTROLLER][SALE] Create sale request received | taxIdentifier={}",
